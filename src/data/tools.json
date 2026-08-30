@@ -1,0 +1,62 @@
+[
+  {
+    "id": "hierarchy",
+    "name": "Anchor Hierarchy",
+    "status": "soon",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(78% 0.14 150)",
+    "summary": "Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.",
+    "detail": "A deeper Hierarchy window: color-coded icons per GameObject (Alt+Click any row to open the palette), a component minimap with a one-click mini-inspector, a bookmark bar for jumping across scenes, and hover shortcuts for toggling active state, framing, and expanding or isolating subtrees — no mouse required.",
+    "icon": "<circle cx=\"5\" cy=\"6\" r=\"2\"/><circle cx=\"5\" cy=\"18\" r=\"2\"/><circle cx=\"14\" cy=\"12\" r=\"2\"/><path d=\"M7 6h5a2 2 0 0 1 2 2v0\"/><path d=\"M7 18h5a2 2 0 0 0 2-2v0\"/><path d=\"M16 12h3\"/>"
+  },
+  {
+    "id": "renamer",
+    "name": "Anchor Renamer",
+    "status": "soon",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(78% 0.14 195)",
+    "summary": "Rule-based batch renaming with live preview, safe numbering, and automatic conflict detection.",
+    "detail": "Rule-based batch renaming with a live preview table, so you see the exact before/after for every selected asset before committing. Safe numbering avoids accidental collisions, and conflicts are flagged automatically rather than silently overwritten.",
+    "icon": "<path d=\"M4 7h11\"/><path d=\"M4 12h7\"/><path d=\"M4 17h5\"/><path d=\"M16 15l4-4 -2-2 -4 4v2h2z\"/>"
+  },
+  {
+    "id": "ruler",
+    "name": "Anchor 2D Ruler",
+    "status": "soon",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(78% 0.14 250)",
+    "summary": "On-canvas distance, range, and FOV cone measurement for 2D scenes, with grid snapping and 1-click copy.",
+    "detail": "A native UI Toolkit overlay for 2D measurement in Scene View. Four modes — line, path, box, and cone — cover distance, area, and FOV checks, with concentric range circles, magnetic and tilemap snapping, and 1-click clipboard copy on any measurement badge. A recent-measurements drawer keeps your last few copies within reach.",
+    "icon": "<rect x=\"3\" y=\"9\" width=\"18\" height=\"6\" rx=\"1\"/><path d=\"M6 9v3M9 9v2M12 9v3M15 9v2M18 9v3\"/>"
+  },
+  {
+    "id": "inspector",
+    "name": "Anchor Inspector",
+    "status": "dev",
+    "statusLabel": "In development",
+    "accent": "oklch(72% 0.1 230)",
+    "summary": "Faster Inspector navigation with component shortcuts and a cleaner default layout.",
+    "detail": "Faster navigation for the Inspector: collapse or expand every component at once, isolate one component’s view, toggle a component’s enabled state, or delete it — all from hover shortcuts, plus a cleaner default layout.",
+    "icon": "<line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><circle cx=\"9\" cy=\"6\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><circle cx=\"15\" cy=\"12\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"18\" x2=\"20\" y2=\"18\"/><circle cx=\"11\" cy=\"18\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+    "id": "folder",
+    "name": "Anchor Folder",
+    "status": "dev",
+    "statusLabel": "In development",
+    "accent": "oklch(75% 0.13 280)",
+    "summary": "Custom icons and color-coding for Project window folders, so you can spot the right one at a glance.",
+    "detail": "Custom icons and color-coding for Project window folders, built on the same palette system as Anchor Hierarchy — spot the right folder at a glance instead of reading labels one by one.",
+    "icon": "<path d=\"M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z\"/>"
+  },
+  {
+    "id": "playerprefs",
+    "name": "Anchor PlayerPrefs Editor",
+    "status": "dev",
+    "statusLabel": "In development",
+    "accent": "oklch(75% 0.13 320)",
+    "summary": "View, edit, and clear PlayerPrefs entries without leaving the Editor.",
+    "detail": "View, edit, and clear PlayerPrefs key/value entries directly from the Editor — no more guessing what’s stored or clearing saved data by hand.",
+    "icon": "<circle cx=\"7\" cy=\"17\" r=\"3\"/><path d=\"M9 15l9-9\"/><path d=\"M15 9l2 2\"/><path d=\"M18 6l2 2\"/>"
+  }
+]
