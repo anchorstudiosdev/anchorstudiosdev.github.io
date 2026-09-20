@@ -12,7 +12,7 @@
   {
     "id": "inspector",
     "name": "Anchor Inspector",
-    "status": "dev",
+    "status": "soon",
     "statusLabel": "Launching soon",
     "accent": "oklch(72% 0.1 230)",
     "summary": "Faster Inspector navigation with component shortcuts and a cleaner default layout.",
