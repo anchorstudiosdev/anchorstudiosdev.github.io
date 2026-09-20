@@ -10,6 +10,26 @@
     "icon": "<circle cx=\"5\" cy=\"6\" r=\"2\"/><circle cx=\"5\" cy=\"18\" r=\"2\"/><circle cx=\"14\" cy=\"12\" r=\"2\"/><path d=\"M7 6h5a2 2 0 0 1 2 2v0\"/><path d=\"M7 18h5a2 2 0 0 0 2-2v0\"/><path d=\"M16 12h3\"/>"
   },
   {
+    "id": "inspector",
+    "name": "Anchor Inspector",
+    "status": "dev",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(72% 0.1 230)",
+    "summary": "Faster Inspector navigation with component shortcuts and a cleaner default layout.",
+    "detail": "Faster navigation for the Inspector: collapse or expand every component at once, isolate one component’s view, toggle a component’s enabled state, or delete it — all from hover shortcuts, plus a cleaner default layout.",
+    "icon": "<line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><circle cx=\"9\" cy=\"6\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><circle cx=\"15\" cy=\"12\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"18\" x2=\"20\" y2=\"18\"/><circle cx=\"11\" cy=\"18\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/>"
+  },
+  {
+    "id": "quickselect",
+    "name": "Anchor Quick Select",
+    "status": "soon",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(78% 0.14 175)",
+    "summary": "Pin GameObjects, assets, and folders into named pages, with a persistent Shift+1–9 speed dial in one searchable panel.",
+    "detail": "One searchable panel for everything you keep hunting for: bookmarks organized into named, reorderable pages, a Recent tab for jumping back to previous selections, and a persistent Shift+1–9 speed dial that binds to specific objects — per scene for GameObjects, by GUID for assets, so a binding survives renames and moves. Opens docked with Ctrl+Q or as a hold-to-peek overlay with Alt+Q. Bookmarks are shared with Anchor Hierarchy rather than kept as a second private list.",
+    "icon": "<path d=\"M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z\"/><path d=\"M10 9h4\"/>"
+  },
+  {
     "id": "renamer",
     "name": "Anchor Renamer",
     "status": "soon",
@@ -28,16 +48,6 @@
     "summary": "On-canvas distance, range, and FOV cone measurement for 2D scenes, with grid snapping and 1-click copy.",
     "detail": "A native UI Toolkit overlay for 2D measurement in Scene View. Four modes — line, path, box, and cone — cover distance, area, and FOV checks, with concentric range circles, magnetic and tilemap snapping, and 1-click clipboard copy on any measurement badge. A recent-measurements drawer keeps your last few copies within reach.",
     "icon": "<rect x=\"3\" y=\"9\" width=\"18\" height=\"6\" rx=\"1\"/><path d=\"M6 9v3M9 9v2M12 9v3M15 9v2M18 9v3\"/>"
-  },
-  {
-    "id": "inspector",
-    "name": "Anchor Inspector",
-    "status": "dev",
-    "statusLabel": "In development",
-    "accent": "oklch(72% 0.1 230)",
-    "summary": "Faster Inspector navigation with component shortcuts and a cleaner default layout.",
-    "detail": "Faster navigation for the Inspector: collapse or expand every component at once, isolate one component’s view, toggle a component’s enabled state, or delete it — all from hover shortcuts, plus a cleaner default layout.",
-    "icon": "<line x1=\"4\" y1=\"6\" x2=\"20\" y2=\"6\"/><circle cx=\"9\" cy=\"6\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"12\" x2=\"20\" y2=\"12\"/><circle cx=\"15\" cy=\"12\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/><line x1=\"4\" y1=\"18\" x2=\"20\" y2=\"18\"/><circle cx=\"11\" cy=\"18\" r=\"2\" fill=\"currentColor\" stroke=\"none\"/>"
   },
   {
     "id": "folder",
