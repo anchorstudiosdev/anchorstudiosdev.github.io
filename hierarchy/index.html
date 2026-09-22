@@ -1,0 +1,228 @@
+<!doctype html>
+<!-- Generated from the Anchor Hierarchy README by scripts/build-docs.py. Edit the README, then rebuild. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Hierarchy Documentation — Anchor Studios</title>
+  <meta name="description" content="Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/docs.css">
+</head>
+<body style="--tool-accent: oklch(78% 0.14 150);">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../" class="brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </a>
+      <nav>
+        <a href="../#tools">Tools</a>
+        <a href="mailto:contact.anchorstudios@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc-hero">
+      <div class="wrap doc-hero-inner">
+        <div class="modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="14" cy="12" r="2"/><path d="M7 6h5a2 2 0 0 1 2 2v0"/><path d="M7 18h5a2 2 0 0 0 2-2v0"/><path d="M16 12h3"/></svg></div>
+        <div>
+          <div class="doc-eyebrow">Documentation <span class="doc-version">Version 1.0.0</span></div>
+          <h1>Anchor Hierarchy</h1>
+          <p class="lede">Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.</p>
+          <div class="hero-actions">
+            
+            <a class="btn btn-ghost" href="mailto:contact.anchorstudios@gmail.com">Contact support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <div class="doc-toc-title">On this page</div>
+        <ul><li class="toc-2"><a href="#features">Features</a></li><li class="toc-3"><a href="#row-colors-gradients-notes">Row Colors, Gradients &amp; Notes</a></li><li class="toc-3"><a href="#subtree-statistics-tooltip">Subtree Statistics Tooltip</a></li><li class="toc-3"><a href="#tree-connector-lines">Tree Connector Lines</a></li><li class="toc-3"><a href="#row-icons-auto-component-icons">Row Icons &amp; Auto Component Icons</a></li><li class="toc-3"><a href="#inline-activation-checkbox">Inline Activation Checkbox</a></li><li class="toc-3"><a href="#component-minimap-mini-inspector">Component Minimap &amp; Mini Inspector</a></li><li class="toc-3"><a href="#header-rows">Header Rows</a></li><li class="toc-3"><a href="#empty-space-script-drop">Empty Space Script Drop</a></li><li class="toc-3"><a href="#hover-shortcuts">Hover Shortcuts</a></li><li class="toc-3"><a href="#scene-headers-quick-switcher">Scene Headers &amp; Quick Switcher</a></li><li class="toc-3"><a href="#layers-tags-columns">Layers &amp; Tags Columns</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#row-appearance">Row Appearance</a></li><li class="toc-3"><a href="#row-controls">Row Controls</a></li><li class="toc-3"><a href="#toolbar-panels">Toolbar &amp; Panels</a></li><li class="toc-3"><a href="#tag-layer-columns">Tag &amp; Layer Columns</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li></ul>
+      </nav>
+      <article class="doc-content">
+<p>Enhanced Unity Hierarchy window decoration with full-width row colors, parent-child tree connector lines, custom and auto-resolved component icons, inline activation checkboxes, right-aligned component minimaps with floating mini inspectors, keyboard hover shortcuts, toolbar extensions, and interactive layer/tag columns.</p>
+<hr>
+<h2 id="features"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Features</span></h2>
+<h3 id="row-colors-gradients-notes"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.1-.9-1.6-.9-2.5 0-.9.7-1.6 1.6-1.6H17a4 4 0 0 0 4-4c0-4.6-4-8.2-9-8.2z"/><circle cx="7.5" cy="12" r="1"/><circle cx="9.5" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/></svg></span><span>Row Colors, Gradients &amp; Notes</span></h3>
+<ul><li>
+Full-width background colors with per-selection <strong>Gradient</strong> (default) or <strong>Solid</strong> fill modes stored in scene-associated <code>AnchorHierarchyData</code>.
+</li><li>
+Alternating zebra striping when no explicit color is assigned.
+</li><li>
+In-line row notes and comments (<code>// Note</code>) with adaptive background-aware contrast.
+</li><li>
+Auto-contrasted text labels (light/dark) based on background fill brightness.
+</li><li>
+Alt-click any row to open the color palette, icon browser, and note editor.
+</li></ul>
+<h3 id="subtree-statistics-tooltip"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="5" y="11" width="3" height="6" rx="0.5"/><rect x="10.5" y="5" width="3" height="12" rx="0.5"/><rect x="16" y="13" width="3" height="4" rx="0.5"/></svg></span><span>Subtree Statistics Tooltip</span></h3>
+<ul><li>
+Rich metrics tooltip displayed on GameObject name hover:
+<ul><li>
+Total recursive children count (active / inactive breakdown).
+</li><li>
+Component breakdown by category (Colliders, Renderers, Scripts, UI, Physics, Audio, etc.).
+</li><li>
+Total geometry complexity: combined Mesh triangle and vertex count from <code>MeshFilter</code> and <code>SkinnedMeshRenderer</code>.
+</li></ul>
+</li></ul>
+<h3 id="tree-connector-lines"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="5" r="2"/><path d="M6 7v9a3 3 0 0 0 3 3h4"/><path d="M6 11h7"/><circle cx="15" cy="11" r="2"/><circle cx="15" cy="19" r="2"/></svg></span><span>Tree Connector Lines</span></h3>
+<ul><li>
+Draws vertical and horizontal connector lines linking parent GameObjects to their children.
+</li><li>
+Depth-aware alignment matching Unity's foldout arrows.
+</li></ul>
+<h3 id="row-icons-auto-component-icons"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9.5" r="1.5"/><path d="M20 15l-4.5-4.5L7 19"/></svg></span><span>Row Icons &amp; Auto Component Icons</span></h3>
+<ul><li>
+Three icon modes: <strong>All</strong>, <strong>Hide Default</strong>, and <strong>Hide All</strong>.
+</li><li>
+<strong>Auto Component Icons</strong>: Automatically replaces Unity's generic GameObject/prefab icon with the object's first meaningful component icon (e.g. <code>Camera</code>, <code>Light</code>, <code>AudioSource</code>, custom script).
+</li><li>
+Custom icon picker with search across built-in Unity icons.
+</li></ul>
+<h3 id="inline-activation-checkbox"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span><span>Inline Activation Checkbox</span></h3>
+<ul><li>
+Enables/disables GameObjects directly from the Hierarchy.
+</li><li>
+Placement options: <strong>Left</strong> (next to foldout arrow) or <strong>Right</strong> (adjacent to component minimap).
+</li><li>
+Modes: <strong>Always</strong>, <strong>On Hover</strong>, or <strong>Disabled</strong>.
+</li></ul>
+<h3 id="component-minimap-mini-inspector"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M6 12.5h6"/><path d="M6 15.5h4"/><path d="M15 12.5h3"/><path d="M15 15.5h3"/></svg></span><span>Component Minimap &amp; Mini Inspector</span></h3>
+<ul><li>
+Renders component icons along the right edge of each Hierarchy row, showing fewer when the name needs the room.
+</li><li>
+<strong>Alt-click</strong> any component icon in the minimap to open the <strong>Component Mini Inspector</strong>:
+<ul><li>
+A lightweight floating window displaying the component's serialized fields and method action buttons (<code>[Button]</code> / <code>[AnchorButton]</code>).
+</li><li>
+<strong>Auto-close</strong>: Automatically closes when losing focus unless pinned.
+</li><li>
+<strong>Pin Toggle</strong>: Pins the window open on screen for multi-component inspection.
+</li><li>
+<strong>Multi-tier positioning</strong>: Anchors smoothly near the clicked icon, mouse cursor, or active window without spawning off-screen or at <code>(0,0)</code>.
+</li></ul>
+</li></ul>
+<h3 id="header-rows"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="1.5"/><path d="M7 5h10"/><path d="M7 19h10"/></svg></span><span>Header Rows</span></h3>
+<ul><li>
+Renders GameObjects named <code>--- Label ---</code> or <code>// Label</code> as full-width separator banners for visual grouping without real scene reparenting.
+</li></ul>
+<h3 id="empty-space-script-drop"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v10"/><path d="M8 10l4 4 4-4"/><path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg></span><span>Empty Space Script Drop</span></h3>
+<ul><li>
+Drag a single script asset onto the empty space below the last Hierarchy row to spawn a new GameObject carrying that component, named after the script's type.
+</li></ul>
+<h3 id="hover-shortcuts"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Hover Shortcuts</span></h3>
+<p>Hover the cursor over any row in the Hierarchy and press:</p>
+<ul><li>
+<code>E</code>: Expand / collapse children.
+</li><li>
+<code>Shift+E</code>: Isolate / collapse all other sibling branches.
+</li><li>
+<code>Shift+A</code>: Toggle active state.
+</li><li>
+<code>F</code>: Frame / ping in Scene view.
+</li></ul>
+<h3 id="scene-headers-quick-switcher"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span><span>Scene Headers &amp; Quick Switcher</span></h3>
+<ul><li>
+Adds a scene selector dropdown arrow directly on scene header rows in multi-scene workflows.
+</li><li>
+Quick Scene Switcher panel with pinned favorites, bold active scenes, drag reordering, and dockable window mode.
+</li><li>
+Clicking a scene opens it on its own. From a scene header's arrow while the Hierarchy lists more than one scene, it replaces only that scene, keeping its place, its loaded state and whether it is the active scene. Shift+Click adds the scene alongside the listed ones.
+</li></ul>
+<h3 id="layers-tags-columns"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></span><span>Layers &amp; Tags Columns</span></h3>
+<ul><li>
+Interactive columns on the right edge of the Hierarchy:
+<ul><li>
+<strong>Layers Column</strong>: Shows current layer; click to open popup dropdown and reassign layer with Undo support.
+</li><li>
+<strong>Tags Column</strong>: Shows current tag; click to open popup dropdown and reassign tag with Undo support.
+</li><li>
+<strong>Top Header Strip</strong>: Displays <code>Layers</code> | <code>Tags</code> headers above the columns on scene header rows.
+</li><li>
+<strong>Label Clipping</strong>: GameObject names clip cleanly (<code>TextClipping.Clip</code>) to ensure long names never bleed into columns.
+</li></ul>
+</li></ul>
+<hr>
+<h2 id="settings"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><span>Settings</span></h2>
+<p>The <strong>Hierarchy</strong> page under <code>Preferences &gt; Anchor</code>, one foldout section per group:</p>
+<h3 id="row-appearance"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.1-.9-1.6-.9-2.5 0-.9.7-1.6 1.6-1.6H17a4 4 0 0 0 4-4c0-4.6-4-8.2-9-8.2z"/><circle cx="7.5" cy="12" r="1"/><circle cx="9.5" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/></svg></span><span>Row Appearance</span></h3>
+<ul><li>
+<strong>Row Icons</strong>: <code>All</code> / <code>Hide Default</code> / <code>Hide All</code>.
+</li><li>
+<strong>Auto Component Icons</strong>: Toggle automatic component icon resolution.
+</li><li>
+<strong>Tree Lines</strong>: Toggle parent-child tree connector lines.
+</li><li>
+<strong>Zebra Striping</strong>: Toggle alternating row background tinting.
+</li><li>
+<strong>Header Rows</strong>: Toggle <code>--- Header ---</code> banner rendering.
+</li><li>
+<strong>Row Notes</strong>: Toggle in-line textual row notes and comments.
+</li><li>
+<strong>Subtree Statistics Tooltip</strong>: Toggle recursive metrics and triangle/vertex count tooltips.
+</li></ul>
+<h3 id="row-controls"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Row Controls</span></h3>
+<ul><li>
+<strong>Activation Toggle</strong>: <code>Always</code> / <code>On Hover</code> / <code>Disabled</code>, with <strong>Toggle Position</strong> (<code>Left</code> / <code>Right</code>) under it.
+</li><li>
+<strong>Component Minimap</strong>: Toggle the right-side component icon strip, with <strong>Max Icons</strong> (1–10) under it.
+</li></ul>
+<h3 id="toolbar-panels"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Toolbar &amp; Panels</span></h3>
+<ul><li>
+<strong>Toolbar Buttons</strong>: Collapse/expand-all, scene switcher, and bookmarks buttons on Hierarchy toolbar, folding into one <code>⋮</code> menu when the window is narrow.
+</li><li>
+<strong>Bookmark Bar</strong>: Bookmarked GameObject chip strip pinned at the bottom of the Hierarchy.
+</li><li>
+<strong>Bookmark History</strong>: A History column of recent selections in the Bookmarks panel.
+</li><li>
+<strong>Panel Brightness</strong>: Adjust floating window background brightness.
+</li></ul>
+<h3 id="tag-layer-columns"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></span><span>Tag &amp; Layer Columns</span></h3>
+<p>The section's checkbox switches both columns on or off.</p>
+<ul><li>
+<strong>Hide When Crowded</strong>: Hide a row's columns when they would cover its name. Off, they shrink instead.
+</li><li>
+<strong>Min Label Width</strong>: Minimum width kept for GameObject names; with Hide When Crowded off, the columns shrink to keep it.
+</li><li>
+<strong>Column Alignment</strong>: <code>Compact</code> packing or a <code>Fixed Grid</code> of column tracks.
+</li><li>
+<strong>Column Placement</strong>: Where the columns sit relative to the component minimap.
+</li><li>
+<strong>Display Mode</strong>: Columns always shown, or only on the hovered row.
+</li><li>
+<strong>Column Headers</strong>: Toggle top <code>Layers</code> | <code>Tags</code> column header bar.
+</li><li>
+<strong>Layer Column</strong> / <strong>Tag Column</strong>: Show the column, with <strong>Select On Click</strong>, <strong>Hide 'Default'</strong> / <strong>Hide 'Untagged'</strong> and <strong>Width</strong> under it.
+</li></ul>
+<h3 id="shortcuts"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Shortcuts</span></h3>
+<p>Lists the hover shortcuts. The section's checkbox turns <code>E</code>, <code>Shift+E</code>, <code>Shift+A</code> and <code>F</code> on or off together.</p>
+<hr>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </div>
+      <a class="footer-contact" href="mailto:contact.anchorstudios@gmail.com">contact.anchorstudios@gmail.com</a>
+      <span class="copyright">&copy; 2026 Anchor Studios</span>
+    </div>
+  </footer>
+
+</body>
+</html>

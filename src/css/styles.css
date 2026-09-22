@@ -138,6 +138,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .btn-ghost { border-color: var(--border); color: var(--text); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
+.btn[hidden] { display: none; }
+
 /* Tools */
 .tools { padding: 88px 0 96px; }
 

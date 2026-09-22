@@ -75,6 +75,7 @@
       <h3 id="modal-title"></h3>
       <span class="status" id="modal-status"></span>
       <p id="modal-body"></p>
+      <a class="btn btn-ghost" id="modal-docs" hidden>Read the documentation</a>
     </div>
   </div>
 
@@ -110,6 +111,9 @@
       modalStatus.textContent = tool.statusLabel;
       modalStatus.className = 'status status-' + tool.status;
       modalBody.textContent = tool.detail;
+      const modalDocs = document.getElementById('modal-docs');
+      modalDocs.hidden = !tool.docs;
+      if (tool.docs) modalDocs.href = tool.docs;
       modalIcon.style.setProperty('--tool-accent', tool.accent);
       modalIcon.innerHTML = ICON_SHELL_OPEN + '24" height="24">' + tool.icon + '</svg>';
       lastFocused = document.activeElement;

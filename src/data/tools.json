@@ -6,6 +6,7 @@
     "statusLabel": "Launching soon",
     "accent": "oklch(78% 0.14 150)",
     "summary": "Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.",
+    "docs": "hierarchy/",
     "detail": "A deeper Hierarchy window: color-coded icons per GameObject (Alt+Click any row to open the palette), a component minimap with a one-click mini-inspector, a bookmark bar for jumping across scenes, and hover shortcuts for toggling active state, framing, and expanding or isolating subtrees — no mouse required.",
     "icon": "<circle cx=\"5\" cy=\"6\" r=\"2\"/><circle cx=\"5\" cy=\"18\" r=\"2\"/><circle cx=\"14\" cy=\"12\" r=\"2\"/><path d=\"M7 6h5a2 2 0 0 1 2 2v0\"/><path d=\"M7 18h5a2 2 0 0 0 2-2v0\"/><path d=\"M16 12h3\"/>"
   },
