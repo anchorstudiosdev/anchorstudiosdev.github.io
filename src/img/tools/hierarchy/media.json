@@ -1,0 +1,87 @@
+{
+  "screenshots": [
+    {
+      "src": "01-overview.webp",
+      "thumb": "01-overview-thumb.webp",
+      "label": "Overview",
+      "title": "Your scene, at a glance",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "02-palette.webp",
+      "thumb": "02-palette-thumb.webp",
+      "label": "Palette",
+      "title": "Color any row",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "03-mini-inspector.webp",
+      "thumb": "03-mini-inspector-thumb.webp",
+      "label": "Mini inspector",
+      "title": "Edit without selecting",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "04-scenes.webp",
+      "thumb": "04-scenes-thumb.webp",
+      "label": "Scenes",
+      "title": "Jump between scenes",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "05-bookmarks.webp",
+      "thumb": "05-bookmarks-thumb.webp",
+      "label": "Bookmarks",
+      "title": "Bookmarks & history",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "06-branches.webp",
+      "thumb": "06-branches-thumb.webp",
+      "label": "Branches",
+      "title": "Know every branch",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "07-headers.webp",
+      "thumb": "07-headers-thumb.webp",
+      "label": "Headers & notes",
+      "title": "Name it, it’s a header",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "08-columns.webp",
+      "thumb": "08-columns-thumb.webp",
+      "label": "Columns",
+      "title": "Tags & layers, in place",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "09-settings.webp",
+      "thumb": "09-settings-thumb.webp",
+      "label": "Settings",
+      "title": "Make it yours",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "10-details.webp",
+      "thumb": "10-details-thumb.webp",
+      "label": "Details",
+      "title": "Also in the box",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "banner": "social.webp",
+  "preview": "social.jpg",
+  "card": "card.webp"
+}

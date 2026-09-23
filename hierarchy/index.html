@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anchor Hierarchy Documentation — Anchor Studios</title>
   <meta name="description" content="Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anchorstudiosdev.github.io/hierarchy/">
+  <meta property="og:title" content="Anchor Hierarchy Documentation">
+  <meta property="og:description" content="Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.">
+  <meta property="og:image" content="https://anchorstudiosdev.github.io/src/img/tools/hierarchy/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,15 +40,50 @@
       <div class="wrap doc-hero-inner">
         <div class="modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="5" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="14" cy="12" r="2"/><path d="M7 6h5a2 2 0 0 1 2 2v0"/><path d="M7 18h5a2 2 0 0 0 2-2v0"/><path d="M16 12h3"/></svg></div>
         <div>
-          <div class="doc-eyebrow">Documentation <span class="doc-version">Version 1.0.0</span></div>
+          <div class="doc-eyebrow">
+            <a class="doc-back" href="../#tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>All tools</a>
+            <span class="doc-crumb" aria-hidden="true">/</span>
+            Documentation <span class="doc-version">Version 1.0.0</span>
+          </div>
           <h1>Anchor Hierarchy</h1>
           <p class="lede">Color-coded icons, bookmarks, a component minimap, and hover shortcuts for a faster, more organized Hierarchy.</p>
           <div class="hero-actions">
-            
+            <span class="btn btn-primary btn-soon" aria-disabled="true">View on the Unity Asset Store<span class="btn-tag">Soon</span></span>
             <a class="btn btn-ghost" href="mailto:contact.anchorstudios@gmail.com">Contact support</a>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="doc-gallery" id="screenshots" aria-label="Screenshots">
+      <div class="wrap gallery">
+        <figure class="gallery-stage">
+          <div class="gallery-frame">
+            <button class="gallery-open" type="button" aria-label="View full size">
+              <img id="gallery-image" src="../src/img/tools/hierarchy/01-overview.webp" alt="Overview: Your scene, at a glance" width="1600" height="1067" decoding="async">
+            </button>
+            <button class="gallery-nav gallery-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-count" id="gallery-count">01 / 10</span>
+            <span class="gallery-label" id="gallery-label">Overview</span>
+            <span class="gallery-title" id="gallery-title">Your scene, at a glance</span>
+          </figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          <button class="gallery-thumb" type="button" data-index="0" aria-label="Overview" aria-current="true"><img src="../src/img/tools/hierarchy/01-overview-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="1" aria-label="Palette"><img src="../src/img/tools/hierarchy/02-palette-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="2" aria-label="Mini inspector"><img src="../src/img/tools/hierarchy/03-mini-inspector-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="3" aria-label="Scenes"><img src="../src/img/tools/hierarchy/04-scenes-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="4" aria-label="Bookmarks"><img src="../src/img/tools/hierarchy/05-bookmarks-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="5" aria-label="Branches"><img src="../src/img/tools/hierarchy/06-branches-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="6" aria-label="Headers &amp; notes"><img src="../src/img/tools/hierarchy/07-headers-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="7" aria-label="Columns"><img src="../src/img/tools/hierarchy/08-columns-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="8" aria-label="Settings"><img src="../src/img/tools/hierarchy/09-settings-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="9" aria-label="Details"><img src="../src/img/tools/hierarchy/10-details-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="../src/img/tools/hierarchy/01-overview.webp" alt="Overview: Your scene, at a glance" width="1600" height="1067">
+          <figcaption class="gallery-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="gallery-nav lightbox-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gallery-nav lightbox-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </dialog>
     </section>
 
     <div class="wrap doc-layout">
@@ -51,7 +92,6 @@
         <ul><li class="toc-2"><a href="#features">Features</a></li><li class="toc-3"><a href="#row-colors-gradients-notes">Row Colors, Gradients &amp; Notes</a></li><li class="toc-3"><a href="#subtree-statistics-tooltip">Subtree Statistics Tooltip</a></li><li class="toc-3"><a href="#tree-connector-lines">Tree Connector Lines</a></li><li class="toc-3"><a href="#row-icons-auto-component-icons">Row Icons &amp; Auto Component Icons</a></li><li class="toc-3"><a href="#inline-activation-checkbox">Inline Activation Checkbox</a></li><li class="toc-3"><a href="#component-minimap-mini-inspector">Component Minimap &amp; Mini Inspector</a></li><li class="toc-3"><a href="#header-rows">Header Rows</a></li><li class="toc-3"><a href="#empty-space-script-drop">Empty Space Script Drop</a></li><li class="toc-3"><a href="#hover-shortcuts">Hover Shortcuts</a></li><li class="toc-3"><a href="#collapse-all-shortcut">Collapse All Shortcut</a></li><li class="toc-3"><a href="#scene-headers-quick-switcher">Scene Headers &amp; Quick Switcher</a></li><li class="toc-3"><a href="#layers-tags-columns">Layers &amp; Tags Columns</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#row-appearance">Row Appearance</a></li><li class="toc-3"><a href="#row-controls">Row Controls</a></li><li class="toc-3"><a href="#toolbar-panels">Toolbar &amp; Panels</a></li><li class="toc-3"><a href="#tag-layer-columns">Tag &amp; Layer Columns</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li></ul>
       </nav>
       <article class="doc-content">
-<p>Settings: Edit &gt; Preferences &gt; Anchor &gt; Hierarchy (on macOS, Unity &gt; Settings &gt; Anchor &gt; Hierarchy) or Tools &gt; Anchor &gt; Settings</p>
 <p>Enhanced Unity Hierarchy window decoration with full-width row colors, parent-child tree connector lines, custom and auto-resolved component icons, inline activation checkboxes, right-aligned component minimaps with floating mini inspectors, keyboard shortcuts, toolbar extensions, and interactive layer/tag columns.</p>
 <hr>
 <h2 id="features"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Features</span></h2>
@@ -233,5 +273,55 @@ Interactive columns on the right edge of the Hierarchy:
     </div>
   </footer>
 
+  <script>
+    (() => {
+      const base = '../src/img/tools/hierarchy/';
+      const shots = [{"src": "01-overview.webp", "label": "Overview", "title": "Your scene, at a glance"}, {"src": "02-palette.webp", "label": "Palette", "title": "Color any row"}, {"src": "03-mini-inspector.webp", "label": "Mini inspector", "title": "Edit without selecting"}, {"src": "04-scenes.webp", "label": "Scenes", "title": "Jump between scenes"}, {"src": "05-bookmarks.webp", "label": "Bookmarks", "title": "Bookmarks & history"}, {"src": "06-branches.webp", "label": "Branches", "title": "Know every branch"}, {"src": "07-headers.webp", "label": "Headers & notes", "title": "Name it, it’s a header"}, {"src": "08-columns.webp", "label": "Columns", "title": "Tags & layers, in place"}, {"src": "09-settings.webp", "label": "Settings", "title": "Make it yours"}, {"src": "10-details.webp", "label": "Details", "title": "Also in the box"}];
+      const $ = id => document.getElementById(id);
+      const strip = $('gallery-thumbs');
+      const thumbs = [...strip.querySelectorAll('.gallery-thumb')];
+      const lightbox = $('lightbox');
+      const caption = document.querySelector('.gallery-stage .gallery-caption');
+      const pad = n => String(n).padStart(2, '0');
+      let index = 0;
+
+      function show(next) {
+        index = (next + shots.length) % shots.length;
+        const shot = shots[index];
+        const alt = shot.label + ': ' + shot.title;
+        for (const image of [$('gallery-image'), $('lightbox-image')]) {
+          image.src = base + shot.src;
+          image.alt = alt;
+        }
+        $('gallery-count').textContent = pad(index + 1) + ' / ' + pad(shots.length);
+        $('gallery-label').textContent = shot.label;
+        $('gallery-title').textContent = shot.title;
+        $('lightbox-caption').innerHTML = caption.innerHTML;
+        thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === index));
+        const thumb = thumbs[index];
+        if (strip.scrollWidth > strip.clientWidth)
+          strip.scrollTo({ left: thumb.offsetLeft - (strip.clientWidth - thumb.offsetWidth) / 2, behavior: 'smooth' });
+        new Image().src = base + shots[(index + 1) % shots.length].src;
+      }
+
+      for (const button of document.querySelectorAll('.gallery-prev, .lightbox-prev'))
+        button.addEventListener('click', () => show(index - 1));
+      for (const button of document.querySelectorAll('.gallery-next, .lightbox-next'))
+        button.addEventListener('click', () => show(index + 1));
+      strip.addEventListener('click', e => {
+        const thumb = e.target.closest('.gallery-thumb');
+        if (thumb) show(Number(thumb.dataset.index));
+      });
+      document.querySelector('.gallery-open').addEventListener('click', () => lightbox.showModal());
+      document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+      $('screenshots').addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        show(index + (e.key === 'ArrowLeft' ? -1 : 1));
+      });
+      $('lightbox-caption').innerHTML = caption.innerHTML;
+    })();
+  </script>
 </body>
 </html>

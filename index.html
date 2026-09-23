@@ -46,6 +46,24 @@
       </div>
     </section>
 
+    <section class="spotlight" id="spotlight" hidden>
+      <div class="wrap">
+        <article class="spotlight-card" id="spotlight-card">
+          <div class="spotlight-text">
+            <span class="status" id="spotlight-status"></span>
+            <h2 id="spotlight-title"></h2>
+            <p id="spotlight-summary"></p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" id="spotlight-docs">Explore</a>
+            </div>
+          </div>
+          <a class="spotlight-art" id="spotlight-art" tabindex="-1">
+            <img id="spotlight-image" alt="" width="1200" height="630">
+          </a>
+        </article>
+      </div>
+    </section>
+
     <section id="tools" class="tools">
       <div class="wrap">
         <h2>Tools</h2>
@@ -68,6 +86,7 @@
 
   <div class="modal-backdrop" id="tool-modal" hidden>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <img class="modal-banner" id="modal-banner" alt="" width="840" height="560" hidden>
       <button class="modal-close" id="modal-close" aria-label="Close">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
@@ -97,6 +116,26 @@
       document.getElementById('tool-grid').innerHTML = tools.map(cardHTML).join('');
     }
 
+    // The first tool with key art and docs gets the band above the grid.
+    function renderSpotlight(tools) {
+      const tool = tools.find(t => t.banner && t.docs);
+      if (!tool) return;
+      document.getElementById('spotlight-card').style.setProperty('--tool-accent', tool.accent);
+      const status = document.getElementById('spotlight-status');
+      status.textContent = tool.statusLabel;
+      status.className = 'status status-' + tool.status;
+      document.getElementById('spotlight-title').textContent = tool.name;
+      document.getElementById('spotlight-summary').textContent = tool.summary;
+      const explore = document.getElementById('spotlight-docs');
+      explore.textContent = 'Explore ' + tool.name;
+      explore.href = tool.docs;
+      document.getElementById('spotlight-art').href = tool.docs;
+      const image = document.getElementById('spotlight-image');
+      image.src = tool.banner;
+      image.alt = tool.name + ' in the Unity Hierarchy window';
+      document.getElementById('spotlight').hidden = false;
+    }
+
     const modal = document.getElementById('tool-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalStatus = document.getElementById('modal-status');
@@ -116,6 +155,10 @@
       if (tool.docs) modalDocs.href = tool.docs;
       modalIcon.style.setProperty('--tool-accent', tool.accent);
       modalIcon.innerHTML = ICON_SHELL_OPEN + '24" height="24">' + tool.icon + '</svg>';
+      const modalBanner = document.getElementById('modal-banner');
+      modalBanner.hidden = !tool.card;
+      if (tool.card) modalBanner.src = tool.card;
+      modal.querySelector('.modal').classList.toggle('has-banner', Boolean(tool.card));
       lastFocused = document.activeElement;
       modal.hidden = false;
       document.getElementById('modal-close').focus();
@@ -152,7 +195,7 @@
 
     fetch('src/data/tools.json')
       .then(res => res.json())
-      .then(tools => { TOOLS = tools; renderTools(tools); })
+      .then(tools => { TOOLS = tools; renderTools(tools); renderSpotlight(tools); })
       .catch(err => console.error('Failed to load tools.json', err));
   </script>
 

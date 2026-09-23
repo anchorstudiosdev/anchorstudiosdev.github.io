@@ -3,7 +3,8 @@
 Usage: python scripts/build-docs.py <tool id> <path to README.md> [--version X.Y.Z]
 
 Writes <tool id>/index.html. The tool's name, summary, accent and icon come from src/data/tools.json,
-so the page matches its card. Edit the README, then run this again; never edit the output by hand.
+so the page matches its card, and the screenshots from src/img/tools/<tool id>/media.json, which
+scripts/import-media.py writes. Edit the README, then run this again; never edit the output by hand.
 """
 import argparse
 import html
@@ -12,6 +13,14 @@ import pathlib
 import re
 
 SITE = pathlib.Path(__file__).resolve().parent.parent
+SITE_URL = "https://anchorstudiosdev.github.io/"
+
+SVG_OPEN = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+            'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">')
+BACK_ICON = SVG_OPEN + '<path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>'
+PREV_ICON = SVG_OPEN + '<path d="M15 18l-6-6 6-6"/></svg>'
+NEXT_ICON = SVG_OPEN + '<path d="M9 18l6-6-6-6"/></svg>'
+CLOSE_ICON = SVG_OPEN + '<path d="M6 6l12 12M18 6L6 18"/></svg>'
 
 # Line icons for section headings, drawn on a 24-unit grid in the same stroke style as the tool cards.
 ICONS = {
@@ -174,15 +183,142 @@ def toc(headings):
     return "<ul>" + "".join(items) + "</ul>"
 
 
-def page(tool, content, headings, version):
+def load_media(tool_id):
+    path = SITE / "src/img/tools" / tool_id / "media.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def preview_meta(tool, media):
+    """Link-preview tags, so a shared docs link shows the tool's social image."""
+    if not media.get("preview"):
+        return ""
+    title = html.escape(tool["name"] + " Documentation")
+    summary = html.escape(tool["summary"])
+    image = f'{SITE_URL}src/img/tools/{tool["id"]}/{media["preview"]}'
+    return f"""
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{SITE_URL}{tool['id']}/">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{summary}">
+  <meta property="og:image" content="{image}">
+  <meta name="twitter:card" content="summary_large_image">"""
+
+
+def gallery(tool, media):
+    """The screenshot viewer under the hero, with thumbnails and a full-size lightbox, and its script."""
+    shots = media.get("screenshots")
+    if not shots:
+        return "", ""
+    base = f'../src/img/tools/{tool["id"]}/'
+    first = shots[0]
+    first_alt = html.escape(f'{first["label"]}: {first["title"]}')
+    thumbs = []
+    for index, shot in enumerate(shots):
+        current = ' aria-current="true"' if index == 0 else ""
+        thumbs.append(f'<button class="gallery-thumb" type="button" data-index="{index}" '
+                      f'aria-label="{html.escape(shot["label"])}"{current}>'
+                      f'<img src="{base}{shot["thumb"]}" alt="" width="480" height="320" loading="lazy" '
+                      f'decoding="async"></button>')
+    data = json.dumps([{"src": s["src"], "label": s["label"], "title": s["title"]} for s in shots],
+                      ensure_ascii=False)
+    section = f"""
+    <section class="doc-gallery" id="screenshots" aria-label="Screenshots">
+      <div class="wrap gallery">
+        <figure class="gallery-stage">
+          <div class="gallery-frame">
+            <button class="gallery-open" type="button" aria-label="View full size">
+              <img id="gallery-image" src="{base}{first["src"]}" alt="{first_alt}" width="{first["width"]}" height="{first["height"]}" decoding="async">
+            </button>
+            <button class="gallery-nav gallery-prev" type="button" aria-label="Previous screenshot">{PREV_ICON}</button>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Next screenshot">{NEXT_ICON}</button>
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-count" id="gallery-count">01 / {len(shots):02d}</span>
+            <span class="gallery-label" id="gallery-label">{html.escape(first["label"])}</span>
+            <span class="gallery-title" id="gallery-title">{html.escape(first["title"])}</span>
+          </figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          {"".join(thumbs)}
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="{base}{first["src"]}" alt="{first_alt}" width="{first["width"]}" height="{first["height"]}">
+          <figcaption class="gallery-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-close" type="button" aria-label="Close">{CLOSE_ICON}</button>
+        <button class="gallery-nav lightbox-prev" type="button" aria-label="Previous screenshot">{PREV_ICON}</button>
+        <button class="gallery-nav lightbox-next" type="button" aria-label="Next screenshot">{NEXT_ICON}</button>
+      </dialog>
+    </section>
+"""
+    script = f"""
+  <script>
+    (() => {{
+      const base = '{base}';
+      const shots = {data};
+      const $ = id => document.getElementById(id);
+      const strip = $('gallery-thumbs');
+      const thumbs = [...strip.querySelectorAll('.gallery-thumb')];
+      const lightbox = $('lightbox');
+      const caption = document.querySelector('.gallery-stage .gallery-caption');
+      const pad = n => String(n).padStart(2, '0');
+      let index = 0;
+
+      function show(next) {{
+        index = (next + shots.length) % shots.length;
+        const shot = shots[index];
+        const alt = shot.label + ': ' + shot.title;
+        for (const image of [$('gallery-image'), $('lightbox-image')]) {{
+          image.src = base + shot.src;
+          image.alt = alt;
+        }}
+        $('gallery-count').textContent = pad(index + 1) + ' / ' + pad(shots.length);
+        $('gallery-label').textContent = shot.label;
+        $('gallery-title').textContent = shot.title;
+        $('lightbox-caption').innerHTML = caption.innerHTML;
+        thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === index));
+        const thumb = thumbs[index];
+        if (strip.scrollWidth > strip.clientWidth)
+          strip.scrollTo({{ left: thumb.offsetLeft - (strip.clientWidth - thumb.offsetWidth) / 2, behavior: 'smooth' }});
+        new Image().src = base + shots[(index + 1) % shots.length].src;
+      }}
+
+      for (const button of document.querySelectorAll('.gallery-prev, .lightbox-prev'))
+        button.addEventListener('click', () => show(index - 1));
+      for (const button of document.querySelectorAll('.gallery-next, .lightbox-next'))
+        button.addEventListener('click', () => show(index + 1));
+      strip.addEventListener('click', e => {{
+        const thumb = e.target.closest('.gallery-thumb');
+        if (thumb) show(Number(thumb.dataset.index));
+      }});
+      document.querySelector('.gallery-open').addEventListener('click', () => lightbox.showModal());
+      document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', e => {{ if (e.target === lightbox) lightbox.close(); }});
+      $('screenshots').addEventListener('keydown', e => {{
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        show(index + (e.key === 'ArrowLeft' ? -1 : 1));
+      }});
+      $('lightbox-caption').innerHTML = caption.innerHTML;
+    }})();
+  </script>"""
+    return section, script
+
+
+def page(tool, content, headings, version, media):
     icon = ('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
             'stroke-linecap="round" stroke-linejoin="round" width="24" height="24">' + tool["icon"] + "</svg>")
     name = html.escape(tool["name"])
     summary = html.escape(tool["summary"])
     version_note = f'<span class="doc-version">Version {html.escape(version)}</span>' if version else ""
     store = tool.get("store")
-    store_button = (f'<a class="btn btn-primary" href="{html.escape(store)}">View on Asset Store</a>'
-                    if store else "")
+    store_button = (f'<a class="btn btn-primary" href="{html.escape(store)}">View on the Unity Asset Store</a>'
+                    if store else
+                    '<span class="btn btn-primary btn-soon" aria-disabled="true">View on the Unity Asset Store'
+                    '<span class="btn-tag">Soon</span></span>')
+    gallery_section, gallery_script = gallery(tool, media)
     return f"""<!doctype html>
 <!-- Generated from the {name} README by scripts/build-docs.py. Edit the README, then rebuild. -->
 <html lang="en">
@@ -190,7 +326,7 @@ def page(tool, content, headings, version):
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{name} Documentation — Anchor Studios</title>
-  <meta name="description" content="{summary}">
+  <meta name="description" content="{summary}">{preview_meta(tool, media)}
   <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -219,7 +355,11 @@ def page(tool, content, headings, version):
       <div class="wrap doc-hero-inner">
         <div class="modal-icon">{icon}</div>
         <div>
-          <div class="doc-eyebrow">Documentation {version_note}</div>
+          <div class="doc-eyebrow">
+            <a class="doc-back" href="../#tools">{BACK_ICON}All tools</a>
+            <span class="doc-crumb" aria-hidden="true">/</span>
+            Documentation {version_note}
+          </div>
           <h1>{name}</h1>
           <p class="lede">{summary}</p>
           <div class="hero-actions">
@@ -229,7 +369,7 @@ def page(tool, content, headings, version):
         </div>
       </div>
     </section>
-
+{gallery_section}
     <div class="wrap doc-layout">
       <nav class="doc-toc" aria-label="On this page">
         <div class="doc-toc-title">On this page</div>
@@ -251,7 +391,7 @@ def page(tool, content, headings, version):
       <span class="copyright">&copy; 2026 Anchor Studios</span>
     </div>
   </footer>
-
+{gallery_script}
 </body>
 </html>
 """
@@ -269,11 +409,14 @@ def main():
 
     markdown = pathlib.Path(args.readme).read_text(encoding="utf-8-sig")
     markdown = re.sub(r"\A\s*#\s+[^\n]*\n", "", markdown)
+    # The README's settings line is for readers inside Unity; the page's Settings section covers it.
+    markdown = re.sub(r"\A\s*Settings:[^\n]*\n", "", markdown)
     content, headings = render(markdown)
 
     out = SITE / args.tool_id / "index.html"
     out.parent.mkdir(exist_ok=True)
-    out.write_text(page(tool, content, headings, args.version), encoding="utf-8", newline="\n")
+    out.write_text(page(tool, content, headings, args.version, load_media(args.tool_id)),
+                   encoding="utf-8", newline="\n")
     print(out.relative_to(SITE))
 
 

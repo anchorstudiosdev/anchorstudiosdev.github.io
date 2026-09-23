@@ -140,6 +140,71 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 .btn[hidden] { display: none; }
 
+/* A button whose link doesn't exist yet, such as a store page before launch. */
+.btn-soon { cursor: default; opacity: 0.6; }
+.btn-primary.btn-soon:hover { background: var(--accent); }
+
+.btn-tag {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: oklch(16% 0.02 250 / 18%);
+}
+
+/* Spotlight: one tool's key art, between the hero and the grid */
+.spotlight { padding: 72px 0 0; }
+.spotlight[hidden] { display: none; }
+
+.spotlight-card {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+  padding: 56px 0 56px 56px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 78% 50%, color-mix(in oklch, var(--tool-accent) 16%, transparent), transparent 62%),
+    var(--surface);
+}
+
+.spotlight-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.spotlight h2 {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.spotlight p { font-size: 16px; color: var(--muted); max-width: 420px; margin: 0 0 12px; }
+
+/* The key art runs off the card's right edge, turned slightly away, like the store card. */
+.spotlight-art { display: block; margin-right: -14%; perspective: 1600px; }
+
+.spotlight-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 40px 80px -30px oklch(5% 0.02 250 / 90%);
+  transform: rotateY(-9deg);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-art:hover img { transform: rotateY(-4deg); }
+
 /* Tools */
 .tools { padding: 88px 0 96px; }
 
@@ -293,16 +358,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   padding: 36px;
   max-width: 480px;
   width: 100%;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
 }
 
+/* A tool's card art across the top of its popup, edge to edge. */
+.modal-banner {
+  display: block;
+  flex-shrink: 0;
+  width: calc(100% + 72px);
+  max-width: none;
+  height: auto;
+  margin: -36px -36px 4px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-banner[hidden] { display: none; }
+
 .modal-close {
   position: absolute;
   top: 16px;
   right: 16px;
+  z-index: 1;
   background: none;
   border: none;
   color: var(--muted);
@@ -313,6 +396,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 }
 
 .modal-close:hover { color: var(--text); background: var(--surface-2); }
+
+.modal.has-banner .modal-close {
+  color: var(--text);
+  background: color-mix(in oklch, var(--bg) 70%, transparent);
+  backdrop-filter: blur(4px);
+}
 
 .modal-icon {
   width: 48px;
@@ -341,9 +430,19 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   margin: 0;
 }
 
+@media (max-width: 860px) {
+  .spotlight-card { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 40px 0 0 40px; }
+  .spotlight-text { padding-right: 40px; }
+  .spotlight-art { margin: 0 -2px -2px 0; perspective: none; }
+  .spotlight-art img, .spotlight-art:hover img { transform: none; border-radius: 12px 0 0 0; }
+}
+
 @media (max-width: 600px) {
   .header-inner { height: 60px; }
   .site-header nav { gap: 18px; }
   .hero { padding: 64px 0 56px; }
+  .spotlight { padding-top: 48px; }
+  .spotlight-card { padding: 28px 0 0 24px; }
+  .spotlight-text { padding-right: 24px; }
   .tools { padding: 56px 0 64px; }
 }
