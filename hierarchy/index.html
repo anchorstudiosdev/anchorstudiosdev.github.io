@@ -48,10 +48,11 @@
     <div class="wrap doc-layout">
       <nav class="doc-toc" aria-label="On this page">
         <div class="doc-toc-title">On this page</div>
-        <ul><li class="toc-2"><a href="#features">Features</a></li><li class="toc-3"><a href="#row-colors-gradients-notes">Row Colors, Gradients &amp; Notes</a></li><li class="toc-3"><a href="#subtree-statistics-tooltip">Subtree Statistics Tooltip</a></li><li class="toc-3"><a href="#tree-connector-lines">Tree Connector Lines</a></li><li class="toc-3"><a href="#row-icons-auto-component-icons">Row Icons &amp; Auto Component Icons</a></li><li class="toc-3"><a href="#inline-activation-checkbox">Inline Activation Checkbox</a></li><li class="toc-3"><a href="#component-minimap-mini-inspector">Component Minimap &amp; Mini Inspector</a></li><li class="toc-3"><a href="#header-rows">Header Rows</a></li><li class="toc-3"><a href="#empty-space-script-drop">Empty Space Script Drop</a></li><li class="toc-3"><a href="#hover-shortcuts">Hover Shortcuts</a></li><li class="toc-3"><a href="#scene-headers-quick-switcher">Scene Headers &amp; Quick Switcher</a></li><li class="toc-3"><a href="#layers-tags-columns">Layers &amp; Tags Columns</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#row-appearance">Row Appearance</a></li><li class="toc-3"><a href="#row-controls">Row Controls</a></li><li class="toc-3"><a href="#toolbar-panels">Toolbar &amp; Panels</a></li><li class="toc-3"><a href="#tag-layer-columns">Tag &amp; Layer Columns</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li></ul>
+        <ul><li class="toc-2"><a href="#features">Features</a></li><li class="toc-3"><a href="#row-colors-gradients-notes">Row Colors, Gradients &amp; Notes</a></li><li class="toc-3"><a href="#subtree-statistics-tooltip">Subtree Statistics Tooltip</a></li><li class="toc-3"><a href="#tree-connector-lines">Tree Connector Lines</a></li><li class="toc-3"><a href="#row-icons-auto-component-icons">Row Icons &amp; Auto Component Icons</a></li><li class="toc-3"><a href="#inline-activation-checkbox">Inline Activation Checkbox</a></li><li class="toc-3"><a href="#component-minimap-mini-inspector">Component Minimap &amp; Mini Inspector</a></li><li class="toc-3"><a href="#header-rows">Header Rows</a></li><li class="toc-3"><a href="#empty-space-script-drop">Empty Space Script Drop</a></li><li class="toc-3"><a href="#hover-shortcuts">Hover Shortcuts</a></li><li class="toc-3"><a href="#collapse-all-shortcut">Collapse All Shortcut</a></li><li class="toc-3"><a href="#scene-headers-quick-switcher">Scene Headers &amp; Quick Switcher</a></li><li class="toc-3"><a href="#layers-tags-columns">Layers &amp; Tags Columns</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#row-appearance">Row Appearance</a></li><li class="toc-3"><a href="#row-controls">Row Controls</a></li><li class="toc-3"><a href="#toolbar-panels">Toolbar &amp; Panels</a></li><li class="toc-3"><a href="#tag-layer-columns">Tag &amp; Layer Columns</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li></ul>
       </nav>
       <article class="doc-content">
-<p>Enhanced Unity Hierarchy window decoration with full-width row colors, parent-child tree connector lines, custom and auto-resolved component icons, inline activation checkboxes, right-aligned component minimaps with floating mini inspectors, keyboard hover shortcuts, toolbar extensions, and interactive layer/tag columns.</p>
+<p>Settings: Edit &gt; Preferences &gt; Anchor &gt; Hierarchy (on macOS, Unity &gt; Settings &gt; Anchor &gt; Hierarchy) or Tools &gt; Anchor &gt; Settings</p>
+<p>Enhanced Unity Hierarchy window decoration with full-width row colors, parent-child tree connector lines, custom and auto-resolved component icons, inline activation checkboxes, right-aligned component minimaps with floating mini inspectors, keyboard shortcuts, toolbar extensions, and interactive layer/tag columns.</p>
 <hr>
 <h2 id="features"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Features</span></h2>
 <h3 id="row-colors-gradients-notes"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 0 18c1.2 0 1.8-.8 1.8-1.7 0-1.1-.9-1.6-.9-2.5 0-.9.7-1.6 1.6-1.6H17a4 4 0 0 0 4-4c0-4.6-4-8.2-9-8.2z"/><circle cx="7.5" cy="12" r="1"/><circle cx="9.5" cy="7.5" r="1"/><circle cx="14.5" cy="7.5" r="1"/></svg></span><span>Row Colors, Gradients &amp; Notes</span></h3>
@@ -133,6 +134,14 @@ Drag a single script asset onto the empty space below the last Hierarchy row to 
 </li><li>
 <code>F</code>: Frame / ping in Scene view.
 </li></ul>
+<h3 id="collapse-all-shortcut"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Collapse All Shortcut</span></h3>
+<ul><li>
+<code>Shift+Z</code> collapses every object in the Hierarchy, or expands them all again once everything is collapsed. It does what the toolbar's collapse button does, whether or not the toolbar buttons are shown.
+</li><li>
+Works from any window, with no click into the Hierarchy first. With more than one Hierarchy open, it acts on the one under the cursor, else the focused one.
+</li><li>
+Registered with Unity's Shortcut Manager: rebind or remove it in <code>Edit &gt; Shortcuts &gt; Anchor &gt; Hierarchy</code>.
+</li></ul>
 <h3 id="scene-headers-quick-switcher"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l9 5-9 5-9-5 9-5z"/><path d="M3 14l9 5 9-5"/></svg></span><span>Scene Headers &amp; Quick Switcher</span></h3>
 <ul><li>
 Adds a scene selector dropdown arrow directly on scene header rows in multi-scene workflows.
@@ -165,7 +174,7 @@ Interactive columns on the right edge of the Hierarchy:
 </li><li>
 <strong>Tree Lines</strong>: Toggle parent-child tree connector lines.
 </li><li>
-<strong>Zebra Striping</strong>: Toggle alternating row background tinting.
+<strong>Zebra Striping</strong>: Toggle alternating row background tinting, with <strong>Even Row Color</strong> and <strong>Odd Row Color</strong> under it.
 </li><li>
 <strong>Header Rows</strong>: Toggle <code>--- Header ---</code> banner rendering.
 </li><li>
@@ -181,9 +190,9 @@ Interactive columns on the right edge of the Hierarchy:
 </li></ul>
 <h3 id="toolbar-panels"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Toolbar &amp; Panels</span></h3>
 <ul><li>
-<strong>Toolbar Buttons</strong>: Collapse/expand-all, scene switcher, and bookmarks buttons on Hierarchy toolbar, folding into one <code>⋮</code> menu when the window is narrow.
+<strong>Toolbar Buttons</strong>: Collapse/expand-all, scene switcher, and bookmarks buttons on each Hierarchy window's toolbar, folding into one <code>⋮</code> menu when the window is narrow and hidden while the search field fills the toolbar.
 </li><li>
-<strong>Bookmark Bar</strong>: Bookmarked GameObject chip strip pinned at the bottom of the Hierarchy.
+<strong>Bookmark Bar</strong>: Bookmarked GameObject chip strip pinned at the bottom of each Hierarchy window.
 </li><li>
 <strong>Bookmark History</strong>: A History column of recent selections in the Bookmarks panel.
 </li><li>
@@ -207,7 +216,7 @@ Interactive columns on the right edge of the Hierarchy:
 <strong>Layer Column</strong> / <strong>Tag Column</strong>: Show the column, with <strong>Select On Click</strong>, <strong>Hide 'Default'</strong> / <strong>Hide 'Untagged'</strong> and <strong>Width</strong> under it.
 </li></ul>
 <h3 id="shortcuts"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Shortcuts</span></h3>
-<p>Lists the hover shortcuts. The section's checkbox turns <code>E</code>, <code>Shift+E</code>, <code>Shift+A</code> and <code>F</code> on or off together.</p>
+<p>Lists the shortcuts with their current bindings. The section's checkbox turns <code>Shift+Z</code> and the hover shortcuts <code>E</code>, <code>Shift+E</code>, <code>Shift+A</code> and <code>F</code> on or off together.</p>
 <hr>
       </article>
     </div>
