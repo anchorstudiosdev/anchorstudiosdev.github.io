@@ -99,6 +99,8 @@
 <ul><li>
 Full-width background colors with per-selection <strong>Gradient</strong> (default) or <strong>Solid</strong> fill modes stored in scene-associated <code>AnchorHierarchyData</code>.
 </li><li>
+Colors, icons and notes live in <code>&lt;scene folder&gt;/Anchor/Hierarchy/&lt;Scene&gt;.AnchorHierarchy.asset</code>, never in the scene file. Saving the scene drops the data of objects you deleted, and deletes the asset once nothing is left.
+</li><li>
 Alternating zebra striping when no explicit color is assigned.
 </li><li>
 In-line row notes and comments (<code>// Note</code>) with adaptive background-aware contrast.
@@ -129,6 +131,8 @@ Depth-aware alignment matching Unity's foldout arrows.
 Three icon modes: <strong>All</strong>, <strong>Hide Default</strong>, and <strong>Hide All</strong>.
 </li><li>
 <strong>Auto Component Icons</strong>: Automatically replaces Unity's generic GameObject/prefab icon with the object's first meaningful component icon (e.g. <code>Camera</code>, <code>Light</code>, <code>AudioSource</code>, custom script).
+</li><li>
+<strong>Keep Prefab Icons</strong>: Prefab instances keep Unity's prefab icon instead of a component icon, in <strong>Hide Default</strong> too, until you set an icon of your own.
 </li><li>
 Custom icon picker with search across built-in Unity icons.
 </li></ul>
@@ -211,6 +215,8 @@ Interactive columns on the right edge of the Hierarchy:
 <strong>Row Icons</strong>: <code>All</code> / <code>Hide Default</code> / <code>Hide All</code>.
 </li><li>
 <strong>Auto Component Icons</strong>: Toggle automatic component icon resolution.
+</li><li>
+<strong>Keep Prefab Icons</strong>: Keep Unity's prefab icon on prefab instances. Off by default.
 </li><li>
 <strong>Tree Lines</strong>: Toggle parent-child tree connector lines.
 </li><li>
