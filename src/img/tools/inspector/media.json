@@ -1,0 +1,151 @@
+{
+  "screenshots": [
+    {
+      "src": "01-overview.webp",
+      "thumb": "01-overview-thumb.webp",
+      "label": "Overview",
+      "title": "A better Inspector",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "02-no-code.webp",
+      "thumb": "02-no-code-thumb.webp",
+      "label": "No editor code",
+      "title": "One attribute",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "03-sections.webp",
+      "thumb": "03-sections-thumb.webp",
+      "label": "Sections",
+      "title": "Headers that nest",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "04-badges.webp",
+      "thumb": "04-badges-thumb.webp",
+      "label": "Badges",
+      "title": "Say what a field means",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "05-tabs.webp",
+      "thumb": "05-tabs-thumb.webp",
+      "label": "Tabs",
+      "title": "Split it into tabs",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "06-any-script.webp",
+      "thumb": "06-any-script-thumb.webp",
+      "label": "Any script",
+      "title": "Works on Unity’s layout",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "07-conditions.webp",
+      "thumb": "07-conditions-thumb.webp",
+      "label": "Conditions & buttons",
+      "title": "Fields that react",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "08-field-search.webp",
+      "thumb": "08-field-search-thumb.webp",
+      "label": "Field search",
+      "title": "Find any field",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "09-enums.webp",
+      "thumb": "09-enums-thumb.webp",
+      "label": "Searchable enums",
+      "title": "Enums you can search",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "10-add-member.webp",
+      "thumb": "10-add-member-thumb.webp",
+      "label": "Add members",
+      "title": "Missing? Add it",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "11-navigation.webp",
+      "thumb": "11-navigation-thumb.webp",
+      "label": "Navigation bar",
+      "title": "Back, forward, bookmarks",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "12-asset-toolbar.webp",
+      "thumb": "12-asset-toolbar-thumb.webp",
+      "label": "Asset toolbar",
+      "title": "Every asset, one bar",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "13-references.webp",
+      "thumb": "13-references-thumb.webp",
+      "label": "References",
+      "title": "Broken or used?",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "14-clipboard.webp",
+      "thumb": "14-clipboard-thumb.webp",
+      "label": "Clipboard",
+      "title": "Copy many, paste all",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "15-play-mode.webp",
+      "thumb": "15-play-mode-thumb.webp",
+      "label": "Play Mode save",
+      "title": "Keep Play Mode changes",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "16-shortcuts.webp",
+      "thumb": "16-shortcuts-thumb.webp",
+      "label": "Shortcuts",
+      "title": "Hands on the keyboard",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "17-settings.webp",
+      "thumb": "17-settings-thumb.webp",
+      "label": "Settings",
+      "title": "Make it yours",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "18-hierarchy.webp",
+      "thumb": "18-hierarchy-thumb.webp",
+      "label": "Anchor Hierarchy",
+      "title": "Hierarchy from the Inspector",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "banner": "social.webp",
+  "preview": "social.jpg",
+  "card": "card.webp"
+}

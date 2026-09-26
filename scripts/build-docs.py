@@ -39,6 +39,10 @@ ICONS = {
     "tag": '<path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.5"/>',
     "sliders": '<path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/>',
     "toolbar": '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/>',
+    "bookmark": '<path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z"/>',
+    "search": '<circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/>',
+    "tabs": '<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18"/><path d="M8 7V4h6v3"/>',
+    "code": '<path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13.5 5l-3 14"/>',
 }
 
 # First match wins, so the more specific words come first.
@@ -48,15 +52,20 @@ ICON_RULES = [
     (r"color|gradient|appearance", "palette"),
     (r"statistic|tooltip", "chart"),
     (r"tree|connector", "branch"),
+    (r"navigation|bookmark", "bookmark"),
     (r"icon", "image"),
-    (r"checkbox|activation|toggle", "check"),
+    (r"checkbox|activation|toggle|compatib", "check"),
     (r"minimap|inspector", "panel"),
     (r"scene", "layers"),
+    (r"extender|component bar", "toolbar"),
     (r"header", "heading"),
     (r"drop", "drop"),
     (r"shortcut|hotkey|key", "keyboard"),
-    (r"column|tag|layer", "tag"),
-    (r"control", "sliders"),
+    (r"search|enum", "search"),
+    (r"column|tag|layer|badge", "tag"),
+    (r"tab|group|section|layout", "tabs"),
+    (r"control|condition|react", "sliders"),
+    (r"attribute|assembl|name", "code"),
     (r"toolbar|panel|window", "toolbar"),
 ]
 
@@ -96,11 +105,20 @@ def inline(text):
     return "".join(out)
 
 
+def table(rows):
+    """A Markdown table as HTML: the first row is the header, the dashed row under it is dropped."""
+    cells = [[inline(cell.strip()) for cell in row.strip().strip("|").split("|")] for row in rows]
+    body = [row for row in cells[1:] if not all(re.fullmatch(r":?-{3,}:?", cell) for cell in row)]
+    head = "".join(f"<th>{cell}</th>" for cell in cells[0])
+    rows_html = "".join("<tr>" + "".join(f"<td>{cell}</td>" for cell in row) + "</tr>" for row in body)
+    return f'<div class="doc-table"><table><thead><tr>{head}</tr></thead><tbody>{rows_html}</tbody></table></div>'
+
+
 def render(markdown):
     """Convert the README's Markdown subset to HTML, returning (html, headings)."""
     lines = markdown.replace("\r\n", "\n").split("\n")
     body, headings = [], []
-    paragraph, list_stack = [], []
+    paragraph, list_stack, table_rows = [], [], []
     anchors = set()
 
     def flush_paragraph():
@@ -108,15 +126,21 @@ def render(markdown):
             body.append("<p>" + inline(" ".join(paragraph)) + "</p>")
             paragraph.clear()
 
+    def flush_table():
+        if table_rows:
+            body.append(table(table_rows))
+            table_rows.clear()
+
+    # Each open list is (depth, tag), so a numbered list closes with </ol>.
     def close_lists(depth=0):
         while len(list_stack) > depth:
-            body.append("</li></ul>")
-            list_stack.pop()
+            body.append(f"</li></{list_stack.pop()[1]}>")
 
     in_code = False
     for raw in lines:
         if raw.strip().startswith("```"):
             flush_paragraph()
+            flush_table()
             close_lists()
             body.append("</code></pre>" if in_code else "<pre><code>")
             in_code = not in_code
@@ -126,6 +150,13 @@ def render(markdown):
             continue
 
         line = raw.rstrip()
+        if line.lstrip().startswith("|"):
+            flush_paragraph()
+            close_lists()
+            table_rows.append(line)
+            continue
+        flush_table()
+
         if not line.strip():
             flush_paragraph()
             continue
@@ -149,18 +180,19 @@ def render(markdown):
             body.append("<hr>")
             continue
 
-        item = re.match(r"(\s*)[-*]\s+(.*)", line)
+        item = re.match(r"(\s*)([-*]|\d+\.)\s+(.*)", line)
         if item:
             flush_paragraph()
+            tag = "ol" if item.group(2)[0].isdigit() else "ul"
             depth = len(item.group(1).replace("\t", "  ")) // 2 + 1
             if depth > len(list_stack):
                 while depth > len(list_stack):
-                    body.append("<ul><li>")
-                    list_stack.append(depth)
+                    body.append(f"<{tag}><li>")
+                    list_stack.append((len(list_stack) + 1, tag))
             else:
                 close_lists(depth)
                 body.append("</li><li>")
-            body.append(inline(item.group(2)))
+            body.append(inline(item.group(3)))
             continue
 
         if list_stack and raw.startswith("  "):
@@ -171,6 +203,7 @@ def render(markdown):
         paragraph.append(line.strip())
 
     flush_paragraph()
+    flush_table()
     close_lists()
     return "\n".join(body), headings
 

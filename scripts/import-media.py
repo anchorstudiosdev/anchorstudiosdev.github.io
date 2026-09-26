@@ -27,8 +27,20 @@ def card_titles(screens_js):
     titles = {}
     for match in re.finditer(r"eyebrow:\s*\['(\d+)',\s*'([^']+)'\],\s*title:\s*\[([^\]]*)\]", text):
         headline = " ".join(re.findall(r"'([^']*)'", match.group(3)))
-        titles[match.group(1)] = (match.group(2).capitalize(), headline)
+        titles[match.group(1)] = (label_case(match.group(2)), headline)
     return titles
+
+
+# Names a card label keeps capitalised after the rest is lowered.
+PROPER_NAMES = ("Anchor Hierarchy", "Anchor Inspector", "Anchor Quick Select", "Play Mode", "Unity")
+
+
+def label_case(eyebrow):
+    """A card's eyebrow as a sentence-case label, product and Unity terms kept as they are written."""
+    label = eyebrow.capitalize()
+    for name in PROPER_NAMES:
+        label = re.sub(re.escape(name), name, label, flags=re.IGNORECASE)
+    return label
 
 
 def save(source, dest, width, quality):

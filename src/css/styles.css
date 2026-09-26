@@ -205,6 +205,65 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 .spotlight-art:hover img { transform: rotateY(-4deg); }
 
+/* Each part of the card stacks every tool's version in one grid cell, as tall as the longest, so
+   changing tools cross-fades the content while everything stays where it is. */
+.spotlight-stack { display: grid; }
+.spotlight-stack > .spotlight-layer { grid-area: 1 / 1; transition: opacity 0.5s ease, visibility 0.5s; }
+.spotlight-stack > .spotlight-layer:not(.is-active) { opacity: 0; visibility: hidden; }
+.spotlight-stack.hero-actions { display: grid; }
+.spotlight-text .spotlight-stack { width: 100%; }
+.spotlight-text .spotlight-layer { display: flex; align-items: flex-start; }
+.spotlight-art-stack { margin-right: -14%; }
+.spotlight-art-stack .spotlight-art { margin-right: 0; }
+
+.spotlight-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 22px;
+}
+
+.spotlight-controls[hidden] { display: none; }
+
+.spotlight-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.spotlight-nav:hover { color: var(--text); border-color: var(--tool-accent, var(--accent)); }
+
+.spotlight-dots { display: flex; align-items: center; gap: 8px; }
+
+.spotlight-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: var(--border);
+  cursor: pointer;
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.spotlight-dot:hover { background: var(--muted); }
+.spotlight-dot[aria-current="true"] { width: 28px; background: var(--tool-accent, var(--accent)); }
+
+@media (prefers-reduced-motion: reduce) {
+  .spotlight-stack > .spotlight-layer,
+  .spotlight-dot { transition: none; }
+}
+
 /* Tools */
 .tools { padding: 88px 0 96px; }
 
@@ -434,6 +493,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .spotlight-card { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 40px 0 0 40px; }
   .spotlight-text { padding-right: 40px; }
   .spotlight-art { margin: 0 -2px -2px 0; perspective: none; }
+  .spotlight-art-stack { margin: 0; }
   .spotlight-art img, .spotlight-art:hover img { transform: none; border-radius: 12px 0 0 0; }
 }
 

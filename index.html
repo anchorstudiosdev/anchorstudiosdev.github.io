@@ -46,21 +46,18 @@
       </div>
     </section>
 
-    <section class="spotlight" id="spotlight" hidden>
+    <section class="spotlight" id="spotlight" aria-roledescription="carousel" aria-label="Featured tools" hidden>
       <div class="wrap">
-        <article class="spotlight-card" id="spotlight-card">
-          <div class="spotlight-text">
-            <span class="status" id="spotlight-status"></span>
-            <h2 id="spotlight-title"></h2>
-            <p id="spotlight-summary"></p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" id="spotlight-docs">Explore</a>
-            </div>
-          </div>
-          <a class="spotlight-art" id="spotlight-art" tabindex="-1">
-            <img id="spotlight-image" alt="" width="1200" height="630">
-          </a>
-        </article>
+        <div class="spotlight-slides" id="spotlight-slides" aria-live="off"></div>
+        <div class="spotlight-controls" id="spotlight-controls" hidden>
+          <button class="spotlight-nav" type="button" id="spotlight-prev" aria-label="Previous tool">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="spotlight-dots" id="spotlight-dots"></div>
+          <button class="spotlight-nav" type="button" id="spotlight-next" aria-label="Next tool">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
       </div>
     </section>
 
@@ -116,24 +113,101 @@
       document.getElementById('tool-grid').innerHTML = tools.map(cardHTML).join('');
     }
 
-    // The first tool with key art and docs gets the band above the grid.
+    const SPOTLIGHT_INTERVAL = 7000;
+    const escapeHTML = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    // One card whose status, title, summary, button and art each sit in a stack holding every
+    // featured tool's version in one grid cell. Each stack is as tall as its longest version, so
+    // switching tools changes only the content, never where anything sits.
+    function spotlightHTML(featured) {
+      const stack = (cls, render) => '<div class="spotlight-stack ' + cls + '">' +
+        featured.map((tool, i) => '<div class="spotlight-layer" data-slide="' + i + '">' + render(tool, i) + '</div>').join('') +
+        '</div>';
+      return '' +
+        '<article class="spotlight-card" id="spotlight-card">' +
+          '<div class="spotlight-text">' +
+            stack('', tool => '<span class="status status-' + tool.status + '">' + escapeHTML(tool.statusLabel) + '</span>') +
+            stack('', tool => '<h2>' + escapeHTML(tool.name) + '</h2>') +
+            stack('', tool => '<p>' + escapeHTML(tool.summary) + '</p>') +
+            stack('hero-actions', tool => '<a class="btn btn-primary" href="' + tool.docs + '">Explore ' + escapeHTML(tool.name) + '</a>') +
+          '</div>' +
+          stack('spotlight-art-stack', (tool, i) =>
+            '<a class="spotlight-art" href="' + tool.docs + '" tabindex="-1" aria-hidden="true">' +
+              '<img src="' + tool.banner + '" alt="" width="1200" height="630"' + (i ? ' loading="lazy"' : '') + '>' +
+            '</a>') +
+        '</article>';
+    }
+
+    // Every tool with key art and docs is featured in the band above the grid. With more than one,
+    // they turn on their own until the pointer or keyboard focus is on the band.
     function renderSpotlight(tools) {
-      const tool = tools.find(t => t.banner && t.docs);
-      if (!tool) return;
-      document.getElementById('spotlight-card').style.setProperty('--tool-accent', tool.accent);
-      const status = document.getElementById('spotlight-status');
-      status.textContent = tool.statusLabel;
-      status.className = 'status status-' + tool.status;
-      document.getElementById('spotlight-title').textContent = tool.name;
-      document.getElementById('spotlight-summary').textContent = tool.summary;
-      const explore = document.getElementById('spotlight-docs');
-      explore.textContent = 'Explore ' + tool.name;
-      explore.href = tool.docs;
-      document.getElementById('spotlight-art').href = tool.docs;
-      const image = document.getElementById('spotlight-image');
-      image.src = tool.banner;
-      image.alt = tool.name + ' in the Unity Hierarchy window';
-      document.getElementById('spotlight').hidden = false;
+      const featured = tools.filter(t => t.banner && t.docs);
+      if (!featured.length) return;
+
+      const section = document.getElementById('spotlight');
+      const holder = document.getElementById('spotlight-slides');
+      holder.innerHTML = spotlightHTML(featured);
+      const card = document.getElementById('spotlight-card');
+      const layers = [...holder.querySelectorAll('.spotlight-layer')];
+      section.hidden = false;
+
+      let current = 0;
+      function show(index) {
+        current = (index + featured.length) % featured.length;
+        layers.forEach(layer => {
+          const active = Number(layer.dataset.slide) === current;
+          layer.classList.toggle('is-active', active);
+          layer.inert = !active;
+        });
+        dots.forEach((dot, i) => dot.setAttribute('aria-current', i === current));
+        section.style.setProperty('--tool-accent', featured[current].accent);
+        card.style.setProperty('--tool-accent', featured[current].accent);
+      }
+
+      const dotHolder = document.getElementById('spotlight-dots');
+      dotHolder.innerHTML = featured.map(tool =>
+        '<button class="spotlight-dot" type="button" aria-label="Show ' + escapeHTML(tool.name) + '"></button>').join('');
+      const dots = [...dotHolder.children];
+      show(0);
+      if (featured.length < 2) return;
+
+      document.getElementById('spotlight-controls').hidden = false;
+      document.getElementById('spotlight-prev').addEventListener('click', () => { show(current - 1); restart(); });
+      document.getElementById('spotlight-next').addEventListener('click', () => { show(current + 1); restart(); });
+      dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); restart(); }));
+
+      section.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        show(current + (e.key === 'ArrowLeft' ? -1 : 1));
+        restart();
+      });
+
+      let touchX = null;
+      holder.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      holder.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) > 40) { show(current + (dx < 0 ? 1 : -1)); restart(); }
+      });
+
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let timer = null;
+      let held = false;
+      function restart() {
+        clearInterval(timer);
+        timer = null;
+        if (!held && !reducedMotion.matches && !document.hidden)
+          timer = setInterval(() => show(current + 1), SPOTLIGHT_INTERVAL);
+      }
+      function hold(on) { held = on; restart(); }
+      section.addEventListener('mouseenter', () => hold(true));
+      section.addEventListener('mouseleave', () => hold(section.contains(document.activeElement)));
+      section.addEventListener('focusin', () => hold(true));
+      section.addEventListener('focusout', e => { if (!section.contains(e.relatedTarget)) hold(section.matches(':hover')); });
+      document.addEventListener('visibilitychange', restart);
+      reducedMotion.addEventListener('change', restart);
+      restart();
     }
 
     const modal = document.getElementById('tool-modal');

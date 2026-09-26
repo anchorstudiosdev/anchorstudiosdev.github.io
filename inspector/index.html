@@ -1,0 +1,509 @@
+<!doctype html>
+<!-- Generated from the Anchor Inspector README by scripts/build-docs.py. Edit the README, then rebuild. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Inspector Documentation — Anchor Studios</title>
+  <meta name="description" content="Organized inspectors from attributes, with no editor code: sections, tabs, conditions and buttons, plus bookmarks and component tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anchorstudiosdev.github.io/inspector/">
+  <meta property="og:title" content="Anchor Inspector Documentation">
+  <meta property="og:description" content="Organized inspectors from attributes, with no editor code: sections, tabs, conditions and buttons, plus bookmarks and component tools.">
+  <meta property="og:image" content="https://anchorstudiosdev.github.io/src/img/tools/inspector/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/docs.css">
+</head>
+<body style="--tool-accent: oklch(76% 0.13 240);">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../" class="brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </a>
+      <nav>
+        <a href="../#tools">Tools</a>
+        <a href="mailto:contact.anchorstudios@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc-hero">
+      <div class="wrap doc-hero-inner">
+        <div class="modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><line x1="4" y1="6" x2="20" y2="6"/><circle cx="9" cy="6" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="12" x2="20" y2="12"/><circle cx="15" cy="12" r="2" fill="currentColor" stroke="none"/><line x1="4" y1="18" x2="20" y2="18"/><circle cx="11" cy="18" r="2" fill="currentColor" stroke="none"/></svg></div>
+        <div>
+          <div class="doc-eyebrow">
+            <a class="doc-back" href="../#tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>All tools</a>
+            <span class="doc-crumb" aria-hidden="true">/</span>
+            Documentation <span class="doc-version">Version 1.0.0</span>
+          </div>
+          <h1>Anchor Inspector</h1>
+          <p class="lede">Organized inspectors from attributes, with no editor code: sections, tabs, conditions and buttons, plus bookmarks and component tools.</p>
+          <div class="hero-actions">
+            <span class="btn btn-primary btn-soon" aria-disabled="true">View on the Unity Asset Store<span class="btn-tag">Soon</span></span>
+            <a class="btn btn-ghost" href="mailto:contact.anchorstudios@gmail.com">Contact support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-gallery" id="screenshots" aria-label="Screenshots">
+      <div class="wrap gallery">
+        <figure class="gallery-stage">
+          <div class="gallery-frame">
+            <button class="gallery-open" type="button" aria-label="View full size">
+              <img id="gallery-image" src="../src/img/tools/inspector/01-overview.webp" alt="Overview: A better Inspector" width="1600" height="1067" decoding="async">
+            </button>
+            <button class="gallery-nav gallery-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-count" id="gallery-count">01 / 18</span>
+            <span class="gallery-label" id="gallery-label">Overview</span>
+            <span class="gallery-title" id="gallery-title">A better Inspector</span>
+          </figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          <button class="gallery-thumb" type="button" data-index="0" aria-label="Overview" aria-current="true"><img src="../src/img/tools/inspector/01-overview-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="1" aria-label="No editor code"><img src="../src/img/tools/inspector/02-no-code-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="2" aria-label="Sections"><img src="../src/img/tools/inspector/03-sections-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="3" aria-label="Badges"><img src="../src/img/tools/inspector/04-badges-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="4" aria-label="Tabs"><img src="../src/img/tools/inspector/05-tabs-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="5" aria-label="Any script"><img src="../src/img/tools/inspector/06-any-script-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="6" aria-label="Conditions &amp; buttons"><img src="../src/img/tools/inspector/07-conditions-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="7" aria-label="Field search"><img src="../src/img/tools/inspector/08-field-search-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="8" aria-label="Searchable enums"><img src="../src/img/tools/inspector/09-enums-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="9" aria-label="Add members"><img src="../src/img/tools/inspector/10-add-member-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="10" aria-label="Navigation bar"><img src="../src/img/tools/inspector/11-navigation-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="11" aria-label="Asset toolbar"><img src="../src/img/tools/inspector/12-asset-toolbar-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="12" aria-label="References"><img src="../src/img/tools/inspector/13-references-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="13" aria-label="Clipboard"><img src="../src/img/tools/inspector/14-clipboard-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="14" aria-label="Play Mode save"><img src="../src/img/tools/inspector/15-play-mode-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="15" aria-label="Shortcuts"><img src="../src/img/tools/inspector/16-shortcuts-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="16" aria-label="Settings"><img src="../src/img/tools/inspector/17-settings-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="17" aria-label="Anchor Hierarchy"><img src="../src/img/tools/inspector/18-hierarchy-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="../src/img/tools/inspector/01-overview.webp" alt="Overview: A better Inspector" width="1600" height="1067">
+          <figcaption class="gallery-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="gallery-nav lightbox-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gallery-nav lightbox-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </dialog>
+    </section>
+
+    <div class="wrap doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <div class="doc-toc-title">On this page</div>
+        <ul><li class="toc-2"><a href="#quick-start">Quick Start</a></li><li class="toc-2"><a href="#out-of-the-box">Out of the Box</a></li><li class="toc-3"><a href="#navigation-bar">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender">Header Extender</a></li><li class="toc-3"><a href="#component-bar">Component Bar</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li><li class="toc-3"><a href="#searchable-enums">Searchable Enums</a></li><li class="toc-3"><a href="#field-search">Field Search</a></li><li class="toc-2"><a href="#with-attributes">With Attributes</a></li><li class="toc-3"><a href="#sectioned-inspectors">Sectioned Inspectors</a></li><li class="toc-3"><a href="#badges">Badges</a></li><li class="toc-3"><a href="#tooltips">Tooltips</a></li><li class="toc-3"><a href="#groups-tabs">Groups &amp; Tabs</a></li><li class="toc-3"><a href="#conditions">Conditions</a></li><li class="toc-3"><a href="#buttons">Buttons</a></li><li class="toc-3"><a href="#reacting-to-edits">Reacting to Edits</a></li><li class="toc-3"><a href="#names-assemblies">Names &amp; Assemblies</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#navigation-bar-2">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender-2">Header Extender</a></li><li class="toc-3"><a href="#component-bar-2">Component Bar</a></li><li class="toc-3"><a href="#sectioned-layout">Sectioned Layout</a></li><li class="toc-3"><a href="#field-search-2">Field Search</a></li><li class="toc-3"><a href="#searchable-enums-2">Searchable Enums</a></li><li class="toc-3"><a href="#shortcuts-2">Shortcuts</a></li><li class="toc-2"><a href="#compatibility">Compatibility</a></li><li class="toc-3"><a href="#override-bar-placement-experimental">Override Bar Placement (Experimental)</a></li></ul>
+      </nav>
+      <article class="doc-content">
+<p>Attribute-driven inspectors without editor code, and tools for every Inspector window. The tools work as soon as the package is imported: a Navigation Bar with history and bookmarks, a Header Extender under asset titles, a Component Bar on component headers, component shortcuts, searchable enum fields and field search. The attributes go on your own scripts: <code>[SectionedInspector]</code> turns <code>[Header]</code> attributes into nested, foldable sections with badges and tooltips, and conditions, buttons, callbacks, groups and tabs work on any script. Every feature has its own switch.</p>
+<hr>
+<h2 id="quick-start"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Quick Start</span></h2>
+<ol><li>
+Select anything. The Inspector gains a Navigation Bar along its top, component headers show buttons when you point at them, assets get a toolbar under their title, and enum fields open a searchable popup.
+</li><li>
+Mark a MonoBehaviour or ScriptableObject with <code>[SectionedInspector]</code>. Its <code>[Header]</code> attributes become foldable sections.
+</li><li>
+Add attributes where you need them. Tabs, conditions, buttons and callbacks work on any script.
+</li></ol>
+<pre><code>
+using Anchor.Inspector;
+using UnityEngine;
+
+[SectionedInspector]
+public class Enemy : MonoBehaviour
+{
+    [Tab(&quot;Stats&quot;)]
+    [Header(&quot;Health&quot;)]
+    [SerializeField] private int maxHealth = 100;
+
+    [SerializeField] private bool regenerates;
+
+    [ShowIf(nameof(regenerates))]
+    [Unit(&quot;hp/s&quot;)]
+    [SerializeField] private float regenRate = 2f;
+
+    [Tab(&quot;Loot&quot;)]
+    [SerializeField] private int gold = 5;
+
+    [Button]
+    private void ResetStats() =&gt; maxHealth = 100;
+}
+</code></pre>
+<hr>
+<h2 id="out-of-the-box"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Out of the Box</span></h2>
+<p>These work as soon as the package is imported, with no code.</p>
+<h3 id="navigation-bar"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z"/></svg></span><span>Navigation Bar</span></h3>
+<p>A bar at the top of every Inspector window.</p>
+<ul><li>
+<strong>Back</strong> and <strong>Forward</strong> step through recently selected objects, skipping any that no longer exist.
+</li><li>
+Bookmark chips, as many as fit, with the rest in a searchable <strong>…</strong> list:
+<ul><li>
+Click selects and pings; Ctrl/Cmd-click adds to or removes from the selection.
+</li><li>
+Double-click opens an asset or frames a scene object in the Scene view.
+</li><li>
+Drag a chip onto an object field, the Scene view or the Hierarchy, or along the strip to reorder. Drop objects on the strip to bookmark them.
+</li><li>
+Right-click for a menu; middle-click removes the bookmark.
+</li><li>
+With Anchor Hierarchy installed, Alt/Option-click a scene object's chip to open Hierarchy's palette and set its row color, icon or note.
+</li></ul>
+</li><li>
+The star bookmarks or removes the object the window shows.
+</li><li>
+A locked Inspector's bar follows its own object.
+</li><li>
+With Anchor Quick Select installed, bookmarks in closed scenes show as dimmed chips: click one to open its scene and select the object, or right-click to open the scene additively.
+</li><li>
+Bookmarks are shared with Anchor Hierarchy and Anchor Quick Select when they are installed. With Anchor Hierarchy on, a chip shows the object's icon as Hierarchy resolves it, including one set in its palette.
+</li></ul>
+<h3 id="header-extender"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Header Extender</span></h3>
+<p>A toolbar under an asset's title in the Inspector.</p>
+<ul><li>
+<strong>Edit</strong> opens a script in your IDE (for a ScriptableObject, the script that defines it), a prefab in Prefab Mode, and any other asset in its default editor.
+</li><li>
+<strong>Find Refs</strong> selects the asset and runs Unity's <strong>Find References In Scene</strong>.
+</li><li>
+<strong>Ping</strong> pings it in the Project window.
+</li><li>
+<strong>Open In Window</strong> opens a new Inspector locked to it.
+</li><li>
+The <strong>⋮</strong> menu: Duplicate, Reveal in Explorer/Finder, Copy GUID, Copy Asset Path, Select Instances In Scene for a prefab, and Recount References.
+</li><li>
+A <strong>missing</strong> badge counts missing scripts and broken references on prefabs and ScriptableObjects.
+</li><li>
+<strong>Used by</strong>: click to scan the project's prefabs, ScriptableObjects, scenes, materials and animator controllers for assets referencing this one. Progress shows on the badge, and the results list in the Console.
+</li><li>
+<strong>Asset Types</strong> picks which kinds of asset get the toolbar. Folders and scene objects never do.
+</li></ul>
+<h3 id="component-bar"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Component Bar</span></h3>
+<p>Buttons on every component's header. By default they show while the pointer is over the header.</p>
+<ul><li>
+<strong>Edit</strong> opens the component's script.
+</li><li>
+<strong>Copy</strong> adds the component to Anchor's clipboard, which collects copies across objects until cleared.
+</li><li>
+<strong>Paste</strong> pastes a copied component's values onto a component of the same type.
+</li><li>
+<strong>Paste N Components</strong>, under Add Component, adds every copied component as a new one. A copied Transform is skipped, and so is a second copy of a component that allows only one.
+</li><li>
+<strong>Save</strong> keeps a scene component's values when Play Mode stops, written back with Undo. <strong>Tools &gt; Anchor &gt; Inspector &gt; Play Mode Saved Components</strong> lists what is queued.
+</li><li>
+With several objects selected, Paste, Save and Paste N Components act on each of them, one Undo step each.
+</li><li>
+<strong>GameObject &gt; Anchor &gt; Copy Components To Selection</strong> copies every component of the active object onto the other selected objects.
+</li></ul>
+<h3 id="shortcuts"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Shortcuts</span></h3>
+<p>Registered with Unity's Shortcut Manager under <strong>Anchor &gt; Inspector</strong>, so each can be rebound or removed:</p>
+<div class="doc-table"><table><thead><tr><th>Shortcut</th><th>Does</th></tr></thead><tbody><tr><td>Ctrl+Shift+E</td><td>Collapse or expand every component in the Inspector under the cursor, else the focused one</td></tr><tr><td>Shift+E</td><td>Collapse every component except the one under the cursor</td></tr><tr><td>Shift+A</td><td>Turn the component under the cursor on or off</td></tr><tr><td>Shift+X</td><td>Remove the component under the cursor</td></tr></tbody></table></div>
+<ul><li>
+The last three act on the component under the cursor for every selected object.
+</li><li>
+<strong>Shift+X</strong> never removes a Transform, or a component another one requires; a notification says why.
+</li></ul>
+<h3 id="searchable-enums"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span>Searchable Enums</span></h3>
+<p>Enum fields open a searchable popup in place of Unity's.</p>
+<ul><li>
+Search by display name, by name in code, or by the number beside each member.
+</li><li>
+Up and Down move through the results while you type; Enter picks.
+</li><li>
+Favorites, per enum type and project: star a member, show only favorites, or pin them to the top.
+</li><li>
+<strong>Add Members From Search</strong>: a search that matches no member offers <strong>+ Add</strong>. After a confirmation naming the script and line, the member is added to the enum's declaration, the script recompiles, and the field is set to it as one Undo step. Only enums in the project's own editable scripts can be changed, and the script edit itself can't be undone.
+</li><li>
+The field behaves like Unity's own: prefab overrides, the right-click menu, mixed values and Undo.
+</li><li>
+<code>[Flags]</code> enums, and enums with fewer than <strong>Minimum Members</strong>, keep Unity's own control.
+</li></ul>
+<h3 id="field-search"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span>Field Search</span></h3>
+<ul><li>
+A search box above the fields of any MonoBehaviour or ScriptableObject with at least <strong>Minimum Fields</strong> of them (12 by default), unless it has its own custom editor.
+</li><li>
+It matches field names, and on a sectioned type also section paths and badge labels.
+</li><li>
+Groups with a match open while you type, and clearing the box puts them back.
+</li><li>
+It matches top-level fields, not fields inside a list, a struct or a <code>[SerializeReference]</code> value.
+</li></ul>
+<hr>
+<h2 id="with-attributes"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13.5 5l-3 14"/></svg></span><span>With Attributes</span></h2>
+<p>Add these to your own MonoBehaviours and ScriptableObjects. They live in the <code>Anchor.Inspector</code> namespace, and no editor script is needed.</p>
+<h3 id="sectioned-inspectors"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M6 12.5h6"/><path d="M6 15.5h4"/><path d="M15 12.5h3"/><path d="M15 15.5h3"/></svg></span><span>Sectioned Inspectors</span></h3>
+<pre><code>
+using Anchor.Inspector;
+using UnityEngine;
+
+[SectionedInspector]
+public class EnemyConfig : ScriptableObject
+{
+    [Header(&quot;Stats/Health&quot;)]
+    [SerializeField] private int maxHealth = 100;
+
+    [Header(&quot;Stats/Movement&quot;)]
+    [SerializeField] private float moveSpeed = 3f;
+
+    [Header(&quot;Rewards&quot;)]
+    [SerializeField] private int gold = 5;
+}
+</code></pre>
+<ul><li>
+A <code>[Header]</code> path becomes nested sections: <code>Stats/Health</code> and <code>Stats/Movement</code> are two cards inside one <strong>Stats</strong> card. The separator is <code>/</code> by default.
+</li><li>
+A <code>[Header]</code> applies to its field and every field after it until the next one, as in Unity's own Inspector.
+</li><li>
+Each section remembers whether it is open, per type.
+</li><li>
+Rows split between label and value by percentage, so they fill the Inspector at any width.
+</li><li>
+Arrays, lists, <code>[SerializeReference]</code> fields and nested classes keep Unity's full-width layout.
+</li><li>
+A type without <code>[SectionedInspector]</code> keeps Unity's own default Inspector.
+</li></ul>
+<h3 id="badges"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></span><span>Badges</span></h3>
+<p>Pills beside a field's value, on sectioned types.</p>
+<pre><code>
+[Required]        // REQ       red: must be assigned
+[RuntimeValue]    // RUNTIME   amber: written by code at runtime
+[Deprecated]      // OLD       gray: kept so older data still loads
+[Unit(&quot;m&quot;)]       // m         blue: the unit of the value
+[SerializeField] private float range = 12f;
+</code></pre>
+<ul><li>
+Write your own by subclassing <code>FieldBadgeAttribute</code>:
+</li></ul>
+<pre><code>
+public sealed class ExperimentalAttribute : FieldBadgeAttribute
+{
+    public ExperimentalAttribute() : base(&quot;EXP&quot;, &quot;Not final. May change.&quot;, BadgeTint.Amber) { }
+}
+</code></pre>
+<ul><li>
+<code>BadgeTint.Accent</code>, the default, follows the <strong>Icon Accent</strong> color; Red, Amber, Green, Gray and Blue stay fixed.
+</li><li>
+A field can carry several badges.
+</li><li>
+Other inspector assets define a <code>[Required]</code> too. In a file that imports both namespaces, write <code>[Anchor.Inspector.Required]</code> or add <code>using Required = Anchor.Inspector.RequiredAttribute;</code>.
+</li></ul>
+<h3 id="tooltips"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><rect x="5" y="11" width="3" height="6" rx="0.5"/><rect x="10.5" y="5" width="3" height="12" rx="0.5"/><rect x="16" y="13" width="3" height="4" rx="0.5"/></svg></span><span>Tooltips</span></h3>
+<p>A field's <code>[Tooltip]</code> always shows on hover. On a sectioned type, <strong>Tooltip Display</strong> can show it too:</p>
+<ul><li>
+<strong>Badge</strong> (default): a <code>?</code> pill that expands the text under the row.
+</li><li>
+<strong>Below</strong>: dim text under the row.
+</li><li>
+<strong>Beside</strong>: dim text in a column beside the field.
+</li><li>
+<strong>Off</strong>: hover only.
+</li></ul>
+<h3 id="groups-tabs"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18"/><path d="M8 7V4h6v3"/></svg></span><span>Groups &amp; Tabs</span></h3>
+<pre><code>
+[Tab(&quot;Combat&quot;)]
+[SerializeField] private int damage = 10;
+
+[Foldout(&quot;Critical Hits&quot;)]
+[SerializeField] private float critChance = 0.1f;
+</code></pre>
+<ul><li>
+<code>[Tab]</code> puts a field, and every field after it until the next one, in a tab. Fields before the first <code>[Tab]</code> go in a <strong>General</strong> tab, and a type with a single tab shows no strip.
+</li><li>
+<code>[Foldout]</code> puts one field in a named foldout wherever it is declared; other fields with the same name join it.
+</li><li>
+On a sectioned type, <code>[Header]</code> sections nest inside tabs. On any other type the fields Unity built move into foldouts and tab panes, and each <code>[Header]</code> stays where Unity draws it.
+</li></ul>
+<h3 id="conditions"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Conditions</span></h3>
+<pre><code>
+[ShowIf(nameof(isEnabled))]                                        // while a bool is true
+[ShowIf(nameof(mode), Mode.Ranged)]                                // while an enum equals a value
+[ShowIf(nameof(tier), Tier.Gold, Tier.Platinum)]                   // while it equals any of them
+[HideIf(nameof(isLocked))]                                         // the inverse of ShowIf
+[EnableIf(nameof(level), AnchorComparison.GreaterThanOrEqual, 10)] // greys out instead of hiding
+[ReadOnly]                                                         // never editable
+</code></pre>
+<ul><li>
+They work with or without <code>[SectionedInspector]</code>, in UI Toolkit and IMGUI inspectors.
+</li><li>
+A condition reads a sibling field: a bool, an int, a float (comparisons only), an enum by its value, so a <code>[Flags]</code> enum compares as a bitmask, or an object reference, by whether one is assigned.
+</li><li>
+Comparisons: <code>LessThan</code>, <code>LessThanOrEqual</code>, <code>GreaterThan</code>, <code>GreaterThanOrEqual</code>, <code>EqualTo</code> and <code>NotEqualTo</code>.
+</li><li>
+Conditions update as the sibling changes.
+</li><li>
+On a sectioned row the whole row follows the condition: label, value, tooltip and badges.
+</li><li>
+Several conditions on one field combine: every hiding condition must pass for the field to show, and every disabling one for it to be enabled.
+</li><li>
+On a list or array, a sectioned row applies the condition to the whole field. On any other type Unity runs the condition for each element, so the elements hide or grey out while the list's header and size stay.
+</li><li>
+Conditions fail open. A sibling that can't be read, selected objects whose values differ, or a value that can't be compared all leave the row visible and enabled. A misspelled sibling name also logs one error.
+</li><li>
+Write your own by deriving from <code>AnchorShowIfAttribute</code>, <code>AnchorHideIfAttribute</code> or <code>AnchorEnableIfAttribute</code> and overriding <code>Evaluate</code>. A condition that derives from <code>AnchorConditionAttributeBase</code> or implements <code>IAnchorFieldCondition</code> directly has no property drawer, so it applies on sectioned types only.
+</li></ul>
+<h3 id="buttons"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Buttons</span></h3>
+<pre><code>
+[Button]
+private void RecalculateStats() { ... }
+
+[Button(&quot;Reset To Defaults&quot;)]
+private void ResetDefaults() { ... }
+</code></pre>
+<ul><li>
+A parameterless method becomes a button in an <strong>Actions</strong> card after the fields.
+</li><li>
+A click records Undo on every selected object and shows what the method changed at once.
+</li></ul>
+<h3 id="reacting-to-edits"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Reacting to Edits</span></h3>
+<pre><code>
+[OnValueChanged(nameof(RecalculateDerived))]
+[SerializeField] private int baseDamage;
+
+private void RecalculateDerived() { ... }
+</code></pre>
+<ul><li>
+Calls a parameterless method on the same object, public or private, whenever the field changes in the Inspector.
+</li><li>
+On a list or array it runs when an element changes, not when one is added or removed.
+</li></ul>
+<h3 id="names-assemblies"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13.5 5l-3 14"/></svg></span><span>Names &amp; Assemblies</span></h3>
+<p>Every attribute also has an <code>Anchor</code>-prefixed name: <code>[AnchorShowIf]</code>, <code>[AnchorHideIf]</code>, <code>[AnchorEnableIf]</code>, <code>[AnchorReadOnly]</code>, <code>[AnchorOnValueChanged]</code>, <code>[AnchorButton]</code>, <code>[AnchorGroup]</code> for <code>[Foldout]</code>, and <code>[AnchorTab]</code>. Use it in a file where another asset's attribute of the same name is also in scope.</p>
+<p>The attributes live in the <code>Anchor.Inspector.Attributes</code> assembly, which Unity's own script assemblies reference automatically. A script inside your own assembly definition needs <code>Anchor.Inspector.Attributes</code> added to its Assembly References.</p>
+<hr>
+<h2 id="settings"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><span>Settings</span></h2>
+<p>The <strong>Inspector</strong> page under <code>Preferences &gt; Anchor</code>, one foldout section per feature. Each section's checkbox turns its feature on or off.</p>
+<h3 id="navigation-bar-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z"/></svg></span><span>Navigation Bar</span></h3>
+<ul><li>
+<strong>Back / Forward Buttons</strong>, <strong>Bookmark Chips</strong> and <strong>Bookmark Toggle</strong>: the parts of the bar.
+</li><li>
+<strong>Closed Scene Bookmarks</strong>: dimmed chips for bookmarks in closed scenes, offered while Anchor Quick Select is installed.
+</li><li>
+<strong>Bar Height (px)</strong>: the bar's height; its buttons and chips scale with it.
+</li></ul>
+<h3 id="header-extender-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Header Extender</span></h3>
+<ul><li>
+<strong>Asset Types</strong>: prefabs, ScriptableObjects, scripts, materials, textures, models, audio, animation, scenes and other assets.
+</li><li>
+<strong>Edit</strong>, <strong>Find Refs</strong>, <strong>Ping</strong>, <strong>Open In Window</strong>, <strong>Overflow Menu</strong>, <strong>Missing-Reference Badge</strong> and <strong>Used-By Badge</strong>: show or hide each.
+</li></ul>
+<h3 id="component-bar-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M6.5 6.5h.01M9.5 6.5h.01M12.5 6.5h.01"/></svg></span><span>Component Bar</span></h3>
+<ul><li>
+<strong>Edit Button</strong>, <strong>Copy Button</strong>, <strong>Paste Button</strong> and <strong>Save Button</strong>: <code>Always</code>, <code>On Hover</code> or <code>Off</code>.
+</li><li>
+<strong>Save Only In Play Mode</strong>: hide Save outside Play Mode, where it can only queue a component.
+</li><li>
+<strong>Accurate Value Restore (Experimental)</strong>: also restore references to scene objects when Play Mode stops, and show restored values as prefab overrides.
+</li></ul>
+<h3 id="sectioned-layout"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18"/><path d="M8 7V4h6v3"/></svg></span><span>Sectioned Layout</span></h3>
+<ul><li>
+<strong>Header Separator</strong>: splits a <code>[Header]</code> into nested sections.
+</li><li>
+<strong>Label Width %</strong>: the label's share of the label and value.
+</li><li>
+<strong>Header Accent</strong>: the color of main section headings.
+</li><li>
+<strong>Sections Expanded By Default</strong>: whether a section starts open the first time it is seen.
+</li><li>
+<strong>Show Script Field</strong>: shows the Script field on sectioned scripts. Off by default, since the Component Bar's Edit button opens the script.
+</li><li>
+<strong>Script Field Above Sections</strong>: draws a shown Script field as a plain row above the tabs and sections, as Unity does; off puts it in the first section.
+</li><li>
+<strong>Tooltip Display</strong>, with <strong>Tooltip (Beside) Width %</strong>.
+</li><li>
+<strong>Show Field Badges</strong>, with <strong>Badge Width %</strong>, the badge column's smallest share.
+</li><li>
+<strong>Icon Accent</strong>: the color of the tooltip pill and of Accent badges.
+</li></ul>
+<h3 id="field-search-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span>Field Search</span></h3>
+<ul><li>
+<strong>Minimum Fields</strong>: the fewest fields an inspector needs to show the search box.
+</li></ul>
+<h3 id="searchable-enums-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></span><span>Searchable Enums</span></h3>
+<ul><li>
+<strong>Minimum Members</strong>: smaller enums keep Unity's popup.
+</li><li>
+<strong>Add Members From Search</strong>.
+</li><li>
+<strong>Row Numbers</strong>: the number beside each member: its <code>Position</code>, its <code>Value</code>, or <code>Off</code>.
+</li><li>
+<strong>Popup Background</strong>, <strong>Zebra Striping</strong> with <strong>Even Row Color</strong> and <strong>Odd Row Color</strong>.
+</li><li>
+<strong>Pin Favorites To Top</strong> and <strong>Always Show Favorite Icon</strong>.
+</li><li>
+<strong>Auto-Scroll To Selected</strong>, <strong>Min Height</strong>, <strong>Max Height</strong>, and <strong>Match Dropdown Width</strong> or <strong>Min Width</strong>.
+</li></ul>
+<h3 id="shortcuts-2"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Shortcuts</span></h3>
+<p>Lists the shortcuts with their current bindings. The section's checkbox turns all four on or off.</p>
+<hr>
+<h2 id="compatibility"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span><span>Compatibility</span></h2>
+<p>Anchor Inspector registers custom editors for MonoBehaviour and ScriptableObject, so it can section marked types, and a property drawer for enum fields. A type with its own custom editor keeps it.</p>
+<ul><li>
+Turn the module off on its Preferences page, or any feature in its section. Sectioned types then use Unity's own layout and enum fields Unity's own popup, while conditions, callbacks, buttons, groups and tabs keep working.
+</li><li>
+Define <code>ANCHOR_INSPECTOR_NO_GLOBAL</code> in <strong>Player Settings &gt; Scripting Define Symbols</strong> to leave all three registrations out, for a project where another asset registers its own. A type can still be sectioned: derive an editor from <code>SectionedInspectorEditor</code> with <code>[CustomEditor(typeof(YourType))]</code>, or call <code>AnchorSectionedInspector.Build(serializedObject)</code> from your own editor. An editor inside your own assembly definition needs <code>Anchor.Inspector</code> in its Assembly References.
+</li></ul>
+<h3 id="override-bar-placement-experimental"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Override Bar Placement (Experimental)</span></h3>
+<p>Some Unity 6 versions draw the prefab override and live property bars of UI Toolkit inspectors past the Inspector window's left edge, where they can't be seen and can add a horizontal scroll bar. Define <code>ANCHOR_INSPECTOR_OVERRIDE_BAR_FIX</code> to move them back inside the window; a <strong>Unity Fixes</strong> section then appears on the Preferences page to turn it off.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </div>
+      <a class="footer-contact" href="mailto:contact.anchorstudios@gmail.com">contact.anchorstudios@gmail.com</a>
+      <span class="copyright">&copy; 2026 Anchor Studios</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const base = '../src/img/tools/inspector/';
+      const shots = [{"src": "01-overview.webp", "label": "Overview", "title": "A better Inspector"}, {"src": "02-no-code.webp", "label": "No editor code", "title": "One attribute"}, {"src": "03-sections.webp", "label": "Sections", "title": "Headers that nest"}, {"src": "04-badges.webp", "label": "Badges", "title": "Say what a field means"}, {"src": "05-tabs.webp", "label": "Tabs", "title": "Split it into tabs"}, {"src": "06-any-script.webp", "label": "Any script", "title": "Works on Unity’s layout"}, {"src": "07-conditions.webp", "label": "Conditions & buttons", "title": "Fields that react"}, {"src": "08-field-search.webp", "label": "Field search", "title": "Find any field"}, {"src": "09-enums.webp", "label": "Searchable enums", "title": "Enums you can search"}, {"src": "10-add-member.webp", "label": "Add members", "title": "Missing? Add it"}, {"src": "11-navigation.webp", "label": "Navigation bar", "title": "Back, forward, bookmarks"}, {"src": "12-asset-toolbar.webp", "label": "Asset toolbar", "title": "Every asset, one bar"}, {"src": "13-references.webp", "label": "References", "title": "Broken or used?"}, {"src": "14-clipboard.webp", "label": "Clipboard", "title": "Copy many, paste all"}, {"src": "15-play-mode.webp", "label": "Play Mode save", "title": "Keep Play Mode changes"}, {"src": "16-shortcuts.webp", "label": "Shortcuts", "title": "Hands on the keyboard"}, {"src": "17-settings.webp", "label": "Settings", "title": "Make it yours"}, {"src": "18-hierarchy.webp", "label": "Anchor Hierarchy", "title": "Hierarchy from the Inspector"}];
+      const $ = id => document.getElementById(id);
+      const strip = $('gallery-thumbs');
+      const thumbs = [...strip.querySelectorAll('.gallery-thumb')];
+      const lightbox = $('lightbox');
+      const caption = document.querySelector('.gallery-stage .gallery-caption');
+      const pad = n => String(n).padStart(2, '0');
+      let index = 0;
+
+      function show(next) {
+        index = (next + shots.length) % shots.length;
+        const shot = shots[index];
+        const alt = shot.label + ': ' + shot.title;
+        for (const image of [$('gallery-image'), $('lightbox-image')]) {
+          image.src = base + shot.src;
+          image.alt = alt;
+        }
+        $('gallery-count').textContent = pad(index + 1) + ' / ' + pad(shots.length);
+        $('gallery-label').textContent = shot.label;
+        $('gallery-title').textContent = shot.title;
+        $('lightbox-caption').innerHTML = caption.innerHTML;
+        thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === index));
+        const thumb = thumbs[index];
+        if (strip.scrollWidth > strip.clientWidth)
+          strip.scrollTo({ left: thumb.offsetLeft - (strip.clientWidth - thumb.offsetWidth) / 2, behavior: 'smooth' });
+        new Image().src = base + shots[(index + 1) % shots.length].src;
+      }
+
+      for (const button of document.querySelectorAll('.gallery-prev, .lightbox-prev'))
+        button.addEventListener('click', () => show(index - 1));
+      for (const button of document.querySelectorAll('.gallery-next, .lightbox-next'))
+        button.addEventListener('click', () => show(index + 1));
+      strip.addEventListener('click', e => {
+        const thumb = e.target.closest('.gallery-thumb');
+        if (thumb) show(Number(thumb.dataset.index));
+      });
+      document.querySelector('.gallery-open').addEventListener('click', () => lightbox.showModal());
+      document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+      $('screenshots').addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        show(index + (e.key === 'ArrowLeft' ? -1 : 1));
+      });
+      $('lightbox-caption').innerHTML = caption.innerHTML;
+    })();
+  </script>
+</body>
+</html>

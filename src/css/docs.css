@@ -338,6 +338,40 @@
 
 .doc-content pre code { background: none; border: 0; padding: 0; }
 
+.doc-content ol { padding-left: 24px; margin: 10px 0 16px; }
+.doc-content ol > li::marker { font-family: var(--font-mono); font-size: 0.9em; }
+
+/* A README table, scrolling sideways on its own when the page is narrow. */
+.doc-table {
+  overflow-x: auto;
+  margin: 14px 0 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.doc-table table { width: 100%; border-collapse: collapse; }
+
+.doc-table th,
+.doc-table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-table th {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface);
+}
+
+.doc-table tr:last-child td { border-bottom: 0; }
+.doc-table td:first-child { white-space: nowrap; }
+
 /* The README's section rules; the h2 borders already separate sections. */
 .doc-content hr { display: none; }
 
