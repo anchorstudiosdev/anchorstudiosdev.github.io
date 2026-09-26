@@ -151,7 +151,7 @@ The star bookmarks or removes the object the window shows.
 </li><li>
 A locked Inspector's bar follows its own object.
 </li><li>
-With Anchor Quick Select installed, bookmarks in closed scenes show as dimmed chips: click one to open its scene and select the object, or right-click to open the scene additively.
+With Anchor Quick Select installed, bookmarks in closed scenes show as dimmed chips: click one to open its scene and select the object, or right-click for a menu that can also open the scene additively.
 </li><li>
 Bookmarks are shared with Anchor Hierarchy and Anchor Quick Select when they are installed. With Anchor Hierarchy on, a chip shows the object's icon as Hierarchy resolves it, including one set in its palette.
 </li></ul>
@@ -315,7 +315,7 @@ On a sectioned type, <code>[Header]</code> sections nest inside tabs. On any oth
 [ShowIf(nameof(mode), Mode.Ranged)]                                // while an enum equals a value
 [ShowIf(nameof(tier), Tier.Gold, Tier.Platinum)]                   // while it equals any of them
 [HideIf(nameof(isLocked))]                                         // the inverse of ShowIf
-[EnableIf(nameof(level), AnchorComparison.GreaterThanOrEqual, 10)] // greys out instead of hiding
+[EnableIf(nameof(level), AnchorComparison.GreaterThanOrEqual, 10)] // grays out instead of hiding
 [ReadOnly]                                                         // never editable
 </code></pre>
 <ul><li>
@@ -331,7 +331,7 @@ On a sectioned row the whole row follows the condition: label, value, tooltip an
 </li><li>
 Several conditions on one field combine: every hiding condition must pass for the field to show, and every disabling one for it to be enabled.
 </li><li>
-On a list or array, a sectioned row applies the condition to the whole field. On any other type Unity runs the condition for each element, so the elements hide or grey out while the list's header and size stay.
+On a list or array, a sectioned row applies the condition to the whole field. On any other type Unity runs the condition for each element, so the elements hide or gray out while the list's header and size stay.
 </li><li>
 Conditions fail open. A sibling that can't be read, selected objects whose values differ, or a value that can't be compared all leave the row visible and enabled. A misspelled sibling name also logs one error.
 </li><li>
