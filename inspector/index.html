@@ -102,8 +102,7 @@ Mark a MonoBehaviour or ScriptableObject with <code>[SectionedInspector]</code>.
 </li><li>
 Add attributes where you need them. Tabs, conditions, buttons and callbacks work on any script.
 </li></ol>
-<pre><code>
-using Anchor.Inspector;
+<pre><code>using Anchor.Inspector;
 using UnityEngine;
 
 [SectionedInspector]
@@ -228,8 +227,7 @@ It matches top-level fields, not fields inside a list, a struct or a <code>[Seri
 <h2 id="with-attributes"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4"/><path d="M16 8l4 4-4 4"/><path d="M13.5 5l-3 14"/></svg></span><span>With Attributes</span></h2>
 <p>Add these to your own MonoBehaviours and ScriptableObjects. They live in the <code>Anchor.Inspector</code> namespace, and no editor script is needed.</p>
 <h3 id="sectioned-inspectors"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18"/><path d="M6 12.5h6"/><path d="M6 15.5h4"/><path d="M15 12.5h3"/><path d="M15 15.5h3"/></svg></span><span>Sectioned Inspectors</span></h3>
-<pre><code>
-using Anchor.Inspector;
+<pre><code>using Anchor.Inspector;
 using UnityEngine;
 
 [SectionedInspector]
@@ -260,8 +258,7 @@ A type without <code>[SectionedInspector]</code> keeps Unity's own default Inspe
 </li></ul>
 <h3 id="badges"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7l9 9-7 7-9-9V4z"/><circle cx="8.5" cy="8.5" r="1.5"/></svg></span><span>Badges</span></h3>
 <p>Pills beside a field's value, on sectioned types.</p>
-<pre><code>
-[Required]        // REQ       red: must be assigned
+<pre><code>[Required]        // REQ       red: must be assigned
 [RuntimeValue]    // RUNTIME   amber: written by code at runtime
 [Deprecated]      // OLD       gray: kept so older data still loads
 [Unit(&quot;m&quot;)]       // m         blue: the unit of the value
@@ -270,8 +267,7 @@ A type without <code>[SectionedInspector]</code> keeps Unity's own default Inspe
 <ul><li>
 Write your own by subclassing <code>FieldBadgeAttribute</code>:
 </li></ul>
-<pre><code>
-public sealed class ExperimentalAttribute : FieldBadgeAttribute
+<pre><code>public sealed class ExperimentalAttribute : FieldBadgeAttribute
 {
     public ExperimentalAttribute() : base(&quot;EXP&quot;, &quot;Not final. May change.&quot;, BadgeTint.Amber) { }
 }
@@ -295,8 +291,7 @@ Other inspector assets define a <code>[Required]</code> too. In a file that impo
 <strong>Off</strong>: hover only.
 </li></ul>
 <h3 id="groups-tabs"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M3 11h18"/><path d="M8 7V4h6v3"/></svg></span><span>Groups &amp; Tabs</span></h3>
-<pre><code>
-[Tab(&quot;Combat&quot;)]
+<pre><code>[Tab(&quot;Combat&quot;)]
 [SerializeField] private int damage = 10;
 
 [Foldout(&quot;Critical Hits&quot;)]
@@ -310,8 +305,7 @@ Other inspector assets define a <code>[Required]</code> too. In a file that impo
 On a sectioned type, <code>[Header]</code> sections nest inside tabs. On any other type the fields Unity built move into foldouts and tab panes, and each <code>[Header]</code> stays where Unity draws it.
 </li></ul>
 <h3 id="conditions"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Conditions</span></h3>
-<pre><code>
-[ShowIf(nameof(isEnabled))]                                        // while a bool is true
+<pre><code>[ShowIf(nameof(isEnabled))]                                        // while a bool is true
 [ShowIf(nameof(mode), Mode.Ranged)]                                // while an enum equals a value
 [ShowIf(nameof(tier), Tier.Gold, Tier.Platinum)]                   // while it equals any of them
 [HideIf(nameof(isLocked))]                                         // the inverse of ShowIf
@@ -338,8 +332,7 @@ Conditions fail open. A sibling that can't be read, selected objects whose value
 Write your own by deriving from <code>AnchorShowIfAttribute</code>, <code>AnchorHideIfAttribute</code> or <code>AnchorEnableIfAttribute</code> and overriding <code>Evaluate</code>. A condition that derives from <code>AnchorConditionAttributeBase</code> or implements <code>IAnchorFieldCondition</code> directly has no property drawer, so it applies on sectioned types only.
 </li></ul>
 <h3 id="buttons"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Buttons</span></h3>
-<pre><code>
-[Button]
+<pre><code>[Button]
 private void RecalculateStats() { ... }
 
 [Button(&quot;Reset To Defaults&quot;)]
@@ -351,8 +344,7 @@ A parameterless method becomes a button in an <strong>Actions</strong> card afte
 A click records Undo on every selected object and shows what the method changed at once.
 </li></ul>
 <h3 id="reacting-to-edits"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Reacting to Edits</span></h3>
-<pre><code>
-[OnValueChanged(nameof(RecalculateDerived))]
+<pre><code>[OnValueChanged(nameof(RecalculateDerived))]
 [SerializeField] private int baseDamage;
 
 private void RecalculateDerived() { ... }
