@@ -89,7 +89,7 @@
     <div class="wrap doc-layout">
       <nav class="doc-toc" aria-label="On this page">
         <div class="doc-toc-title">On this page</div>
-        <ul><li class="toc-2"><a href="#quick-start">Quick Start</a></li><li class="toc-2"><a href="#out-of-the-box">Out of the Box</a></li><li class="toc-3"><a href="#navigation-bar">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender">Header Extender</a></li><li class="toc-3"><a href="#component-bar">Component Bar</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li><li class="toc-3"><a href="#searchable-enums">Searchable Enums</a></li><li class="toc-3"><a href="#field-search">Field Search</a></li><li class="toc-2"><a href="#with-attributes">With Attributes</a></li><li class="toc-3"><a href="#sectioned-inspectors">Sectioned Inspectors</a></li><li class="toc-3"><a href="#badges">Badges</a></li><li class="toc-3"><a href="#tooltips">Tooltips</a></li><li class="toc-3"><a href="#groups-tabs">Groups &amp; Tabs</a></li><li class="toc-3"><a href="#conditions">Conditions</a></li><li class="toc-3"><a href="#buttons">Buttons</a></li><li class="toc-3"><a href="#reacting-to-edits">Reacting to Edits</a></li><li class="toc-3"><a href="#names-assemblies">Names &amp; Assemblies</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#navigation-bar-2">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender-2">Header Extender</a></li><li class="toc-3"><a href="#component-bar-2">Component Bar</a></li><li class="toc-3"><a href="#sectioned-layout">Sectioned Layout</a></li><li class="toc-3"><a href="#field-search-2">Field Search</a></li><li class="toc-3"><a href="#searchable-enums-2">Searchable Enums</a></li><li class="toc-3"><a href="#shortcuts-2">Shortcuts</a></li><li class="toc-2"><a href="#compatibility">Compatibility</a></li><li class="toc-3"><a href="#override-bar-placement-experimental">Override Bar Placement (Experimental)</a></li></ul>
+        <ul><li class="toc-2"><a href="#quick-start">Quick Start</a></li><li class="toc-2"><a href="#out-of-the-box">Out of the Box</a></li><li class="toc-3"><a href="#navigation-bar">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender">Header Extender</a></li><li class="toc-3"><a href="#component-bar">Component Bar</a></li><li class="toc-3"><a href="#shortcuts">Shortcuts</a></li><li class="toc-3"><a href="#searchable-enums">Searchable Enums</a></li><li class="toc-3"><a href="#field-search">Field Search</a></li><li class="toc-2"><a href="#with-attributes">With Attributes</a></li><li class="toc-3"><a href="#sectioned-inspectors">Sectioned Inspectors</a></li><li class="toc-3"><a href="#badges">Badges</a></li><li class="toc-3"><a href="#tooltips">Tooltips</a></li><li class="toc-3"><a href="#groups-tabs">Groups &amp; Tabs</a></li><li class="toc-3"><a href="#conditions">Conditions</a></li><li class="toc-3"><a href="#buttons">Buttons</a></li><li class="toc-3"><a href="#reacting-to-edits">Reacting to Edits</a></li><li class="toc-3"><a href="#names-assemblies">Names &amp; Assemblies</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-3"><a href="#navigation-bar-2">Navigation Bar</a></li><li class="toc-3"><a href="#header-extender-2">Header Extender</a></li><li class="toc-3"><a href="#component-bar-2">Component Bar</a></li><li class="toc-3"><a href="#sectioned-layout">Sectioned Layout</a></li><li class="toc-3"><a href="#field-search-2">Field Search</a></li><li class="toc-3"><a href="#searchable-enums-2">Searchable Enums</a></li><li class="toc-3"><a href="#shortcuts-2">Shortcuts</a></li><li class="toc-2"><a href="#compatibility">Compatibility</a></li></ul>
       </nav>
       <article class="doc-content">
 <p>Attribute-driven inspectors without editor code, and tools for every Inspector window. The tools work as soon as the package is imported: a Navigation Bar with history and bookmarks, a Header Extender under asset titles, a Component Bar on component headers, component shortcuts, searchable enum fields and field search. The attributes go on your own scripts: <code>[SectionedInspector]</code> turns <code>[Header]</code> attributes into nested, foldable sections with badges and tooltips, and conditions, buttons, callbacks, groups and tabs work on any script. Every feature has its own switch.</p>
@@ -169,7 +169,7 @@ The <strong>⋮</strong> menu: Duplicate, Reveal in Explorer/Finder, Copy GUID, 
 </li><li>
 A <strong>missing</strong> badge counts missing scripts and broken references on prefabs and ScriptableObjects.
 </li><li>
-<strong>Used by</strong>: click to scan the project's prefabs, ScriptableObjects, scenes, materials and animator controllers for assets referencing this one. Progress shows on the badge, and the results list in the Console.
+<strong>Used by</strong>: click to scan the project for assets referencing this one. Progress shows on the badge, and the results list in the Console.
 </li><li>
 <strong>Asset Types</strong> picks which kinds of asset get the toolbar. Folders and scene objects never do.
 </li></ul>
@@ -246,7 +246,7 @@ public class EnemyConfig : ScriptableObject
 <ul><li>
 A <code>[Header]</code> path becomes nested sections: <code>Stats/Health</code> and <code>Stats/Movement</code> are two cards inside one <strong>Stats</strong> card. The separator is <code>/</code> by default.
 </li><li>
-A <code>[Header]</code> applies to its field and every field after it until the next one, as in Unity's own Inspector.
+A <code>[Header]</code> applies to its field and every field after it until the next one, as in Unity's own Inspector. When one field carries two, the one nearest the field sets its section.
 </li><li>
 Each section remembers whether it is open, per type.
 </li><li>
@@ -341,7 +341,7 @@ private void ResetDefaults() { ... }
 <ul><li>
 A parameterless method becomes a button in an <strong>Actions</strong> card after the fields.
 </li><li>
-A click records Undo on every selected object and shows what the method changed at once.
+A click records Undo on every selected object and shows what the method changed at once. It also marks their scene or asset modified, so Unity asks to save what the method changed elsewhere.
 </li></ul>
 <h3 id="reacting-to-edits"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M18 7h2"/><circle cx="16" cy="7" r="2"/><path d="M4 17h2M10 17h10"/><circle cx="8" cy="17" r="2"/></svg></span><span>Reacting to Edits</span></h3>
 <pre><code>[OnValueChanged(nameof(RecalculateDerived))]
@@ -424,14 +424,14 @@ On a list or array it runs when an element changes, not when one is added or rem
 <p>Lists the shortcuts with their current bindings. The section's checkbox turns all four on or off.</p>
 <hr>
 <h2 id="compatibility"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span><span>Compatibility</span></h2>
-<p>Anchor Inspector registers custom editors for MonoBehaviour and ScriptableObject, so it can section marked types, and a property drawer for enum fields. A type with its own custom editor keeps it.</p>
+<p>Anchor Inspector registers custom editors for MonoBehaviour and ScriptableObject, so it can section marked types, and a property drawer for enum fields. Both editors are fallbacks, so any other custom editor wins: a type with its own editor keeps it, and an asset that registers an editor for every object keeps drawing them.</p>
 <ul><li>
+Where another editor draws a type, Anchor's conditions, callbacks and Searchable Enums still apply to its fields. Sectioning, groups, tabs, the search box and buttons need Anchor's editor; derive one from <code>SectionedInspectorEditor</code> for that type, as described below.
+</li><li>
 Turn the module off on its Preferences page, or any feature in its section. Sectioned types then use Unity's own layout and enum fields Unity's own popup, while conditions, callbacks, buttons, groups and tabs keep working.
 </li><li>
 Define <code>ANCHOR_INSPECTOR_NO_GLOBAL</code> in <strong>Player Settings &gt; Scripting Define Symbols</strong> to leave all three registrations out, for a project where another asset registers its own. A type can still be sectioned: derive an editor from <code>SectionedInspectorEditor</code> with <code>[CustomEditor(typeof(YourType))]</code>, or call <code>AnchorSectionedInspector.Build(serializedObject)</code> from your own editor. An editor inside your own assembly definition needs <code>Anchor.Inspector</code> in its Assembly References.
 </li></ul>
-<h3 id="override-bar-placement-experimental"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Override Bar Placement (Experimental)</span></h3>
-<p>Some Unity 6 versions draw the prefab override and live property bars of UI Toolkit inspectors past the Inspector window's left edge, where they can't be seen and can add a horizontal scroll bar. Define <code>ANCHOR_INSPECTOR_OVERRIDE_BAR_FIX</code> to move them back inside the window; a <strong>Unity Fixes</strong> section then appears on the Preferences page to turn it off.</p>
       </article>
     </div>
   </main>

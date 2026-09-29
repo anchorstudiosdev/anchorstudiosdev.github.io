@@ -137,6 +137,7 @@ def render(markdown):
             body.append(f"</li></{list_stack.pop()[1]}>")
 
     in_code = False
+    code_start = False
     for raw in lines:
         if raw.strip().startswith("```"):
             flush_paragraph()
@@ -144,9 +145,15 @@ def render(markdown):
             close_lists()
             body.append("</code></pre>" if in_code else "<pre><code>")
             in_code = not in_code
+            code_start = in_code
             continue
         if in_code:
-            body.append(html.escape(raw))
+            # The first line joins the opening tag, since a line break there shows as a blank line.
+            if code_start:
+                body[-1] += html.escape(raw)
+                code_start = False
+            else:
+                body.append(html.escape(raw))
             continue
 
         line = raw.rstrip()
