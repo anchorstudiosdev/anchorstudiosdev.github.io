@@ -1,0 +1,342 @@
+<!doctype html>
+<!-- Generated from the Anchor PlayerPrefs README by scripts/build-docs.py. Edit the README, then rebuild. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor PlayerPrefs Documentation — Anchor Studios</title>
+  <meta name="description" content="See and edit PlayerPrefs live in Play Mode, with Undo, snapshots to compare and restore, a sandbox for every run, a log of every write, and the code using each key.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anchorstudiosdev.github.io/playerprefs/">
+  <meta property="og:title" content="Anchor PlayerPrefs Documentation">
+  <meta property="og:description" content="See and edit PlayerPrefs live in Play Mode, with Undo, snapshots to compare and restore, a sandbox for every run, a log of every write, and the code using each key.">
+  <meta property="og:image" content="https://anchorstudiosdev.github.io/src/img/tools/playerprefs/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/docs.css">
+</head>
+<body style="--tool-accent: oklch(80% 0.14 75);">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../" class="brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </a>
+      <nav>
+        <a href="../#tools">Tools</a>
+        <a href="mailto:contact.anchorstudios@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc-hero">
+      <div class="wrap doc-hero-inner">
+        <div class="modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><circle cx="7" cy="17" r="3"/><path d="M9 15l9-9"/><path d="M15 9l2 2"/><path d="M18 6l2 2"/></svg></div>
+        <div>
+          <div class="doc-eyebrow">
+            <a class="doc-back" href="../#tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>All tools</a>
+            <span class="doc-crumb" aria-hidden="true">/</span>
+            Documentation <span class="doc-version">Version 1.0.0</span>
+          </div>
+          <h1>Anchor PlayerPrefs</h1>
+          <p class="lede">See and edit PlayerPrefs live in Play Mode, with Undo, snapshots to compare and restore, a sandbox for every run, a log of every write, and the code using each key.</p>
+          <div class="hero-actions">
+            <span class="btn btn-primary btn-soon" aria-disabled="true">View on the Unity Asset Store<span class="btn-tag">Soon</span></span>
+            <a class="btn btn-ghost" href="mailto:contact.anchorstudios@gmail.com">Contact support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-gallery" id="screenshots" aria-label="Screenshots">
+      <div class="wrap gallery">
+        <figure class="gallery-stage">
+          <div class="gallery-frame">
+            <button class="gallery-open" type="button" aria-label="View full size">
+              <img id="gallery-image" src="../src/img/tools/playerprefs/01-overview.webp" alt="Overview: Every key, live and editable" width="1600" height="1067" decoding="async">
+            </button>
+            <button class="gallery-nav gallery-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-count" id="gallery-count">01 / 12</span>
+            <span class="gallery-label" id="gallery-label">Overview</span>
+            <span class="gallery-title" id="gallery-title">Every key, live and editable</span>
+          </figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          <button class="gallery-thumb" type="button" data-index="0" aria-label="Overview" aria-current="true"><img src="../src/img/tools/playerprefs/01-overview-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="1" aria-label="Json values"><img src="../src/img/tools/playerprefs/02-structured-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="2" aria-label="Find in code"><img src="../src/img/tools/playerprefs/03-in-code-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="3" aria-label="Snapshots"><img src="../src/img/tools/playerprefs/04-snapshots-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="4" aria-label="Watch"><img src="../src/img/tools/playerprefs/05-watch-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="5" aria-label="Sandbox"><img src="../src/img/tools/playerprefs/06-sandbox-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="6" aria-label="Changes"><img src="../src/img/tools/playerprefs/07-changes-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="7" aria-label="Organize"><img src="../src/img/tools/playerprefs/08-groups-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="8" aria-label="Editorprefs"><img src="../src/img/tools/playerprefs/09-editorprefs-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="9" aria-label="List edits"><img src="../src/img/tools/playerprefs/10-list-edits-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="10" aria-label="Settings"><img src="../src/img/tools/playerprefs/11-settings-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="11" aria-label="Details"><img src="../src/img/tools/playerprefs/12-details-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="../src/img/tools/playerprefs/01-overview.webp" alt="Overview: Every key, live and editable" width="1600" height="1067">
+          <figcaption class="gallery-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="gallery-nav lightbox-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gallery-nav lightbox-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </dialog>
+    </section>
+
+    <div class="wrap doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <div class="doc-toc-title">On this page</div>
+        <ul><li class="toc-2"><a href="#quick-start">Quick Start</a></li><li class="toc-2"><a href="#the-key-list">The Key List</a></li><li class="toc-2"><a href="#editing">Editing</a></li><li class="toc-2"><a href="#details">Details</a></li><li class="toc-3"><a href="#in-code">In code</a></li><li class="toc-2"><a href="#the-sidebar">The Sidebar</a></li><li class="toc-2"><a href="#watch">Watch</a></li><li class="toc-2"><a href="#snapshots">Snapshots</a></li><li class="toc-3"><a href="#play-mode">Play Mode</a></li><li class="toc-2"><a href="#changes">Changes</a></li><li class="toc-2"><a href="#editorprefs">EditorPrefs</a></li><li class="toc-2"><a href="#unitys-own-keys">Unity's Own Keys</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-2"><a href="#compatibility">Compatibility</a></li></ul>
+      </nav>
+      <article class="doc-content">
+<p>View, edit and snapshot the project's PlayerPrefs and Unity's EditorPrefs in one window, live while the game runs in Play Mode. Every edit is one Undo step, snapshots compare and restore whole saves, and the Changes page records every write in order.</p>
+<p>Anchor PlayerPrefs reads the prefs where the Editor keeps them on Windows, in the registry. <strong>It supports Windows only.</strong> On macOS and Linux it compiles, and its window says the platform isn't supported.</p>
+<hr>
+<h2 id="quick-start"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Quick Start</span></h2>
+<ol><li>
+Open the window: <strong>Tools &gt; Anchor &gt; PlayerPrefs &gt; Open Anchor PlayerPrefs</strong>, or <strong>Alt+S</strong>.
+</li><li>
+Every key of this project's PlayerPrefs is listed with its type and value. Search, filter by type, or click a column title to sort.
+</li><li>
+Click a value to edit it, and press Enter. <strong>Ctrl+Z</strong> takes it back.
+</li><li>
+Enter Play Mode with <strong>Watch</strong> on: rows the game changes light up.
+</li><li>
+<strong>Snapshots ▾ &gt; Take Snapshot...</strong> saves every key as it is now, to compare with later and restore.
+</li></ol>
+<hr>
+<h2 id="the-key-list"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>The Key List</span></h2>
+<ul><li>
+<strong>Search</strong> matches keys and values, and readable names while they're on.
+</li><li>
+<strong>All Types</strong> shows one type only.
+</li><li>
+<strong>Show grouped</strong> folds keys into groups at their prefix separators: <code>Save_Slot_1</code> and <code>Save_Slot_2</code> fold into a <code>Save_Slot</code> group. Click a group's row to open or close it, or use the Left and Right arrow keys. A group holding one key shows the key instead.
+</li><li>
+<strong>Readable Names</strong>, in Preferences, shows keys the way the Inspector shows field names: <code>player_coins</code> reads Player Coins. The tooltip keeps the raw key.
+</li><li>
+<strong>Show hidden</strong> shows hidden keys too, dimmed.
+</li><li>
+Drag the line between two column titles to resize the columns; the widths are kept.
+</li><li>
+<strong>Refresh</strong> reads the store again and says what it found.
+</li><li>
+A JSON value shows in the list as a one-line summary of its members. Editing it in the list shows it in full.
+</li><li>
+The checkboxes follow the list's selection; the one in the header selects every row.
+</li></ul>
+<p>Each row has buttons at its end: copy the key, copy the value, find the key in code, hide it, the row's menu, and delete. The bookmark star sits at its start. The right-click menu also copies the line of C# that reads the key, such as <code>PlayerPrefs.GetInt(&quot;Player_Coins&quot;)</code>, renames the key and changes its type.</p>
+<hr>
+<h2 id="editing"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Editing</span></h2>
+<ul><li>
+<strong>A value</strong>: click it, type, press Enter. A value that isn't a valid number for its type is refused.
+</li><li>
+<strong>Rename</strong>: F2, or Rename in the row's menu. A name another key has asks before replacing it.
+</li><li>
+<strong>Change type</strong>: click the type. A number converts; text that isn't a number becomes 0, after asking.
+</li><li>
+<strong>Add</strong>: <strong>＋ Add Key</strong> opens the New key panel. Pick the type, type the key and the value, and press Enter; the panel stays open for the next key and keeps its prefix. Add Key Here on a group's menu starts the key with the group's prefix. A key that exists is replaced, and the panel says so first.
+</li><li>
+<strong>Delete</strong>: the row's button, the Delete key, or <strong>Delete Selected</strong>. Several keys are confirmed first.
+</li><li>
+<strong>Delete All</strong> deletes every PlayerPrefs key of the project, Unity's own included. A snapshot named Before Delete All is taken first.
+</li></ul>
+<p>Every edit, rename, type change, delete and restore is one step on Unity's Undo, so <strong>Ctrl+Z</strong> and <strong>Ctrl+Y</strong> work as anywhere in the Editor, after a script recompile too. The last 500 steps are kept.</p>
+<p><strong>List Edits</strong> in Preferences chooses when an edit made in the list is written:</p>
+<ul><li>
+<strong>Write At Once</strong>: as soon as it's made.
+</li><li>
+<strong>Hold Until Applied</strong>: edited rows are marked, and <strong>Apply All</strong> in the bar under the list writes them as one Undo step. <strong>Revert All</strong> drops them.
+</li><li>
+<strong>Apply Per Row</strong>: each edited row has its own Apply and Revert buttons.
+</li></ul>
+<p>Held edits survive a script recompile, and closing the window asks whether to apply them. A held key the game changes meanwhile turns red.</p>
+<hr>
+<h2 id="details"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Details</span></h2>
+<p>The pane under the list shows the selected key in full. <strong>Details</strong> in the toolbar shows or hides it, and its top edge drags to resize it.</p>
+<ul><li>
+Edit the key, the type and the value, then <strong>Apply</strong>, or Enter in the key field. <strong>Revert</strong>, or Esc, drops the edits.
+</li><li>
+<strong>Text</strong> shows the value as it is stored. <strong>Structured</strong> shows JSON as a tree of fields and Unity's semicolon lists as a list, each field edited on its own; arrays add and remove items.
+</li><li>
+For JSON, a line under the value says whether it is valid and where it isn't. <strong>Format</strong> indents it; <strong>Minify</strong> puts it on one line.
+</li></ul>
+<h3 id="in-code"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>In code</span></h3>
+<p>The <strong>In code</strong> section under the details lists the lines of the project's scripts, in Assets and Packages, that name the selected key, grouped by script. Click a line to open it in your code editor.</p>
+<p>A key counts as named when a script writes it out, or builds it: <code>$&quot;Level_{i}&quot;</code>, <code>string.Format(&quot;Level_{0}&quot;, i)</code>, <code>&quot;Level_&quot; + i</code>, a constant joined to a literal, or a settings class that joins a prefix to <code>nameof(...)</code>. A key put together from variables alone isn't found. The scripts are read again when one changes.</p>
+<hr>
+<h2 id="the-sidebar"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>The Sidebar</span></h2>
+<p><strong>☰ Groups</strong> opens the sidebar; its edge drags to resize it.</p>
+<ul><li>
+<strong>All keys</strong>, <strong>Bookmarked</strong> and <strong>Hidden</strong> filter the list. Drop keys on Bookmarked to star them, or on Hidden to hide them.
+</li><li>
+<strong>Not in code</strong> lists PlayerPrefs keys no script names. They are candidates for keys an older version left behind; check before deleting.
+</li><li>
+<strong>Custom groups</strong>: <strong>＋ New Group</strong> makes a group of keys picked by hand and keys that match its rules: starts with, ends with, contains, a wildcard (<code>*</code> and <code>?</code>) or a regular expression, each optionally limited to one type, with Match all rules or any one. A group has a color, shown along the left edge of its keys' rows. Drop keys on a group to add them; right-click it to edit, duplicate or delete it, take a snapshot of its keys, or delete them.
+</li></ul>
+<p><strong>Hide</strong> hides a key, or a whole prefix with keys added under it later; <strong>Hide Others</strong> hides everything but the selection. Bookmarks, groups and hidden keys are kept per project for PlayerPrefs, and per machine for EditorPrefs.</p>
+<hr>
+<h2 id="watch"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Watch</span></h2>
+<p><strong>Watch</strong> reads the store again the moment anything writes it: editor scripts, other tools, another Unity. In Play Mode it also reads the PlayerPrefs on a timer, every 500 ms by default, saving the game's pending writes first so they show. Outside Play Mode, PlayerPrefs a script writes show once it calls <code>PlayerPrefs.Save()</code>.</p>
+<p><strong>Changed Rows</strong> in Preferences chooses how a changed key shows:</p>
+<ul><li>
+<strong>Fade</strong>: a highlight that fades.
+</li><li>
+<strong>Mark Until Seen</strong>: the row stays marked until it is selected for a moment, with a button that puts back what it held. The bar under the list has <strong>Mark All Seen</strong> and <strong>Revert All</strong>.
+</li><li>
+<strong>Off</strong>: nothing.
+</li></ul>
+<p>The window's own edits only fade.</p>
+<hr>
+<h2 id="snapshots"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Snapshots</span></h2>
+<p>The <strong>Snapshots</strong> tab lists the store's snapshots on the left; the picked one is compared on the right with the current prefs or with another snapshot.</p>
+<ul><li>
+<strong>＋ Take Snapshot</strong> saves every key. <strong>Take Snapshot of Selected</strong> in the toolbar's <strong>Snapshots ▾</strong> menu saves only the selected keys: restoring it changes only those keys.
+</li><li>
+The <strong>Changed</strong>, <strong>Missing</strong>, <strong>Extra</strong> and <strong>Same</strong> chips show or hide each kind of difference, with their counts. Drag the lines between the column titles to resize the columns. Selecting a key shows both of its values in full below, JSON laid out and lined up with the differing lines tinted.
+</li><li>
+Each row's button puts that key back as the snapshot has it; select several and right-click to restore them together.
+</li><li>
+<strong>Restore Snapshot</strong> makes the current prefs match the snapshot, as one Undo step. A snapshot named Before restoring ... is taken first.
+</li><li>
+Double-click a snapshot to rename it. Its menu exports it as JSON or as sorted text, shows its file and deletes it.
+</li><li>
+<strong>Import</strong> reads a snapshot or a JSON export, such as one a teammate sent.
+</li></ul>
+<h3 id="play-mode"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Play Mode</span></h3>
+<p>The Play Mode card on the Snapshots page has two switches:</p>
+<ul><li>
+<strong>Snapshot each session</strong> takes a snapshot as each Play Mode session starts, keeping the latest few. Snapshots you take yourself are never deleted.
+</li><li>
+<strong>Restore after Play (sandbox)</strong> puts the PlayerPrefs back as they were when Play Mode started, as it ends, so every run starts from the same state. One Undo step brings back what the game wrote. A <strong>Sandbox</strong> chip at the top of the window shows while it's on; clicking it turns the sandbox off.
+</li></ul>
+<hr>
+<h2 id="changes"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Changes</span></h2>
+<p>The <strong>Changes</strong> tab records every change to the PlayerPrefs, in order, while <strong>Record</strong> is on. It records with the window closed, and Record stays on until you turn it off. A red <strong>Recording</strong> chip at the top of the window shows while it's on; clicking it stops recording.</p>
+<ul><li>
+Changes are grouped into Play sessions and Edit Mode stretches. Double-click a session to name it; <strong>Clear</strong> removes it.
+</li><li>
+<strong>Game</strong>, <strong>Editor</strong> and <strong>Anchor</strong> show or hide changes by who made them: the game in Play Mode, scripts and tools outside it, or this window.
+</li><li>
+<strong>◆ Add Marker</strong> marks a moment with every key as it is. <strong>Restore to here</strong> puts the PlayerPrefs back as they were at the marker, and <strong>Snapshot</strong> saves them as a snapshot.
+</li><li>
+<strong>Group keys</strong> folds a key's changes in a session into one row; select it to see them all with a graph of a number key's values. <strong>By key</strong> lists each key once with how often it changed.
+</li><li>
+<strong>Clock time</strong> shows when each change happened by the clock, rather than the time into its session.
+</li><li>
+Each change can be reverted, shown on the Keys tab, or found in code. <strong>Export ▾</strong> saves the log as JSON or CSV.
+</li></ul>
+<p>The log keeps the latest 5,000 changes, over script recompiles and Play Mode, until the Editor closes. EditorPrefs changes are recorded while <strong>Highlight EditorPrefs Changes</strong> is on in Preferences. The tab shows the changes of the store picked at the top of the window; the Changes page in its own window shows both stores.</p>
+<p>The Snapshots and Changes pages each open in a window of their own from the button at their top right, to dock beside the keys or the Game view.</p>
+<hr>
+<h2 id="editorprefs"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>EditorPrefs</span></h2>
+<p><strong>PlayerPrefs | EditorPrefs</strong> at the top left of the window picks the store every tab shows. <strong>EditorPrefs</strong> are Unity's: the Editor's and every package's settings, shared by every project and Unity version on the machine.</p>
+<ul><li>
+They are read-only until <strong>Allow editing</strong> is on, per window.
+</li><li>
+Unity writes EditorPrefs every few seconds, so their changes are followed quietly. <strong>Highlight EditorPrefs Changes</strong> in Preferences marks them as PlayerPrefs changes are.
+</li></ul>
+<hr>
+<h2 id="unitys-own-keys"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h.01M11 10h.01M15 10h.01M17 10h.01"/><path d="M8 14h8"/></svg></span><span>Unity's Own Keys</span></h2>
+<p>Unity writes a few keys into every project's PlayerPrefs, for the player's window, resolution and quality.</p>
+<ul><li>
+<strong>Hide Unity Keys</strong> in Preferences, on by default, leaves them out of the list.
+</li><li>
+Shown, they are dimmed and read-only until <strong>Edit Unity Keys</strong> is on. A restore leaves them as they are.
+</li></ul>
+<hr>
+<h2 id="settings"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><span>Settings</span></h2>
+<p>The <strong>PlayerPrefs</strong> page under <code>Preferences &gt; Anchor</code> has the module's switch and four sections:</p>
+<ul><li>
+<strong>List</strong>: <strong>Row Size</strong> (Compact, Comfortable, Large); <strong>Alternating Row Colors</strong> with its two colors, for the key list and the Snapshots comparison; <strong>Readable Names</strong>; <strong>Prefix Separators</strong>, the characters that split a key into parts for Show grouped and Readable Names, <code>_./:</code> by default; <strong>JSON Summaries</strong>; <strong>Row Buttons</strong> (Always, On Hover And Selection, or Never) and <strong>Row Buttons Shown</strong>, each button on its own.
+</li><li>
+<strong>Editing</strong>: <strong>List Edits</strong>, and Unity's own keys: <strong>Hide Unity Keys</strong> and <strong>Edit Unity Keys</strong>.
+</li><li>
+<strong>Watch</strong>: <strong>Watch for Changes</strong> with its <strong>Play Mode Interval (ms)</strong>, <strong>Changed Rows</strong> with its <strong>Changed Row Color</strong>, and <strong>Highlight EditorPrefs Changes</strong>.
+</li><li>
+<strong>Play Mode</strong>: <strong>Snapshot on Play</strong> with <strong>Play Snapshots Kept</strong>, and <strong>Restore After Play (Sandbox)</strong>.
+</li></ul>
+<p>With the module off, its menu item is disabled and <strong>Alt+S</strong> does nothing. <strong>Alt+S</strong> is registered with Unity's Shortcut Manager as <strong>Anchor &gt; PlayerPrefs &gt; Open Anchor PlayerPrefs</strong>, where it can be rebound or removed.</p>
+<hr>
+<h2 id="compatibility"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span><span>Compatibility</span></h2>
+<ul><li>
+Windows only. Unity 2022.3 and Unity 6.
+</li><li>
+Editor-only. It adds nothing to a build, and a built player keeps its PlayerPrefs elsewhere.
+</li><li>
+Snapshots, bookmarks, groups and hidden keys of PlayerPrefs are kept in <code>UserSettings/Anchor/PlayerPrefs/</code>, in the project. GitHub's Unity <code>.gitignore</code> leaves <code>UserSettings</code> out of version control.
+</li><li>
+EditorPrefs' bookmarks, groups and hidden keys are kept in <code>%LOCALAPPDATA%\AnchorStudios\PlayerPrefs\</code>.
+</li><li>
+The window's settings are kept in the Editor's preferences on your machine.
+</li></ul>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </div>
+      <a class="footer-contact" href="mailto:contact.anchorstudios@gmail.com">contact.anchorstudios@gmail.com</a>
+      <span class="copyright">&copy; 2026 Anchor Studios</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const base = '../src/img/tools/playerprefs/';
+      const shots = [{"src": "01-overview.webp", "label": "Overview", "title": "Every key, live and editable"}, {"src": "02-structured.webp", "label": "Json values", "title": "JSON as fields"}, {"src": "03-in-code.webp", "label": "Find in code", "title": "The line that uses the key"}, {"src": "04-snapshots.webp", "label": "Snapshots", "title": "Compare, then restore"}, {"src": "05-watch.webp", "label": "Watch", "title": "Watch it happen"}, {"src": "06-sandbox.webp", "label": "Sandbox", "title": "Every run starts clean"}, {"src": "07-changes.webp", "label": "Changes", "title": "Every write, in order"}, {"src": "08-groups.webp", "label": "Organize", "title": "Groups and bookmarks"}, {"src": "09-editorprefs.webp", "label": "Editorprefs", "title": "The Editor’s prefs too"}, {"src": "10-list-edits.webp", "label": "List edits", "title": "Hold edits, apply as one step"}, {"src": "11-settings.webp", "label": "Settings", "title": "Make it yours"}, {"src": "12-details.webp", "label": "Details", "title": "Also in the box"}];
+      const $ = id => document.getElementById(id);
+      const strip = $('gallery-thumbs');
+      const thumbs = [...strip.querySelectorAll('.gallery-thumb')];
+      const lightbox = $('lightbox');
+      const caption = document.querySelector('.gallery-stage .gallery-caption');
+      const pad = n => String(n).padStart(2, '0');
+      let index = 0;
+
+      function show(next) {
+        index = (next + shots.length) % shots.length;
+        const shot = shots[index];
+        const alt = shot.label + ': ' + shot.title;
+        for (const image of [$('gallery-image'), $('lightbox-image')]) {
+          image.src = base + shot.src;
+          image.alt = alt;
+        }
+        $('gallery-count').textContent = pad(index + 1) + ' / ' + pad(shots.length);
+        $('gallery-label').textContent = shot.label;
+        $('gallery-title').textContent = shot.title;
+        $('lightbox-caption').innerHTML = caption.innerHTML;
+        thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === index));
+        const thumb = thumbs[index];
+        if (strip.scrollWidth > strip.clientWidth)
+          strip.scrollTo({ left: thumb.offsetLeft - (strip.clientWidth - thumb.offsetWidth) / 2, behavior: 'smooth' });
+        new Image().src = base + shots[(index + 1) % shots.length].src;
+      }
+
+      for (const button of document.querySelectorAll('.gallery-prev, .lightbox-prev'))
+        button.addEventListener('click', () => show(index - 1));
+      for (const button of document.querySelectorAll('.gallery-next, .lightbox-next'))
+        button.addEventListener('click', () => show(index + 1));
+      strip.addEventListener('click', e => {
+        const thumb = e.target.closest('.gallery-thumb');
+        if (thumb) show(Number(thumb.dataset.index));
+      });
+      document.querySelector('.gallery-open').addEventListener('click', () => lightbox.showModal());
+      document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+      $('screenshots').addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        show(index + (e.key === 'ArrowLeft' ? -1 : 1));
+      });
+      $('lightbox-caption').innerHTML = caption.innerHTML;
+    })();
+  </script>
+</body>
+</html>

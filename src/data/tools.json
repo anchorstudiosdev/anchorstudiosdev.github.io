@@ -67,12 +67,15 @@
   },
   {
     "id": "playerprefs",
-    "name": "Anchor PlayerPrefs Editor",
-    "status": "dev",
-    "statusLabel": "In development",
-    "accent": "oklch(75% 0.13 320)",
-    "summary": "View, edit, and clear PlayerPrefs entries without leaving the Editor.",
-    "detail": "View, edit, and clear PlayerPrefs key/value entries directly from the Editor — no more guessing what’s stored or clearing saved data by hand.",
+    "name": "Anchor PlayerPrefs",
+    "status": "soon",
+    "statusLabel": "Launching soon",
+    "accent": "oklch(80% 0.14 75)",
+    "summary": "See and edit PlayerPrefs live in Play Mode, with Undo, snapshots to compare and restore, a sandbox for every run, a log of every write, and the code using each key.",
+    "docs": "playerprefs/",
+    "banner": "src/img/tools/playerprefs/social.webp",
+    "card": "src/img/tools/playerprefs/card.webp",
+    "detail": "Anchor PlayerPrefs lists your project’s PlayerPrefs with their types and values, and keeps them current while your game runs in Play Mode. Every edit is one Undo step. Snapshots save the whole store to compare and restore later, the sandbox puts it back after every Play session, and the Changes page records every write in order. Find in Code shows the lines of your scripts that use a key, and which keys no script uses anymore. Unity’s EditorPrefs open in the same window.",
     "icon": "<circle cx=\"7\" cy=\"17\" r=\"3\"/><path d=\"M9 15l9-9\"/><path d=\"M15 9l2 2\"/><path d=\"M18 6l2 2\"/>"
   }
 ]

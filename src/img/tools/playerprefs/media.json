@@ -1,0 +1,103 @@
+{
+  "screenshots": [
+    {
+      "src": "01-overview.webp",
+      "thumb": "01-overview-thumb.webp",
+      "label": "Overview",
+      "title": "Every key, live and editable",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "02-structured.webp",
+      "thumb": "02-structured-thumb.webp",
+      "label": "Json values",
+      "title": "JSON as fields",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "03-in-code.webp",
+      "thumb": "03-in-code-thumb.webp",
+      "label": "Find in code",
+      "title": "The line that uses the key",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "04-snapshots.webp",
+      "thumb": "04-snapshots-thumb.webp",
+      "label": "Snapshots",
+      "title": "Compare, then restore",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "05-watch.webp",
+      "thumb": "05-watch-thumb.webp",
+      "label": "Watch",
+      "title": "Watch it happen",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "06-sandbox.webp",
+      "thumb": "06-sandbox-thumb.webp",
+      "label": "Sandbox",
+      "title": "Every run starts clean",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "07-changes.webp",
+      "thumb": "07-changes-thumb.webp",
+      "label": "Changes",
+      "title": "Every write, in order",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "08-groups.webp",
+      "thumb": "08-groups-thumb.webp",
+      "label": "Organize",
+      "title": "Groups and bookmarks",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "09-editorprefs.webp",
+      "thumb": "09-editorprefs-thumb.webp",
+      "label": "Editorprefs",
+      "title": "The Editor’s prefs too",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "10-list-edits.webp",
+      "thumb": "10-list-edits-thumb.webp",
+      "label": "List edits",
+      "title": "Hold edits, apply as one step",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "11-settings.webp",
+      "thumb": "11-settings-thumb.webp",
+      "label": "Settings",
+      "title": "Make it yours",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "12-details.webp",
+      "thumb": "12-details-thumb.webp",
+      "label": "Details",
+      "title": "Also in the box",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "banner": "social.webp",
+  "preview": "social.jpg",
+  "card": "card.webp"
+}
