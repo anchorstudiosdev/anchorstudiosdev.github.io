@@ -74,8 +74,11 @@
     "status": "soon",
     "statusLabel": "Launching soon",
     "accent": "oklch(78% 0.14 25)",
-    "summary": "Rule-based batch renaming with live preview, safe numbering, and automatic conflict detection.",
-    "detail": "Rule-based batch renaming with a live preview table, so you see the exact before/after for every selected asset before committing. Safe numbering avoids accidental collisions, and conflicts are flagged automatically rather than silently overwritten.",
+    "summary": "Batch-rename assets and GameObjects with stacked rules and a live preview. Swaps and case-only renames just work, and an asset batch can be undone even after an Editor restart.",
+    "docs": "renamer/",
+    "banner": "src/img/tools/renamer/social.webp",
+    "card": "src/img/tools/renamer/card.webp",
+    "detail": "Anchor Renamer builds new names from a stack of rules, Override Name, Find & Replace, Prefix / Suffix, Format Case, Quick Cleanup, Trim Characters and Numbering, and shows the result for every asset or GameObject in a live preview before anything is written. Conflicts are marked and resolved with one click, swaps, cycles and case-only renames just work, and Undo Last Rename reverts an asset batch even after a recompile or an Editor restart. Five built-in presets cover the common cases, and your own stacks are available in every project.",
     "icon": "<path d=\"M4 7h11\"/><path d=\"M4 12h7\"/><path d=\"M4 17h5\"/><path d=\"M16 15l4-4 -2-2 -4 4v2h2z\"/>"
   },
   {

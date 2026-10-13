@@ -1,0 +1,294 @@
+<!doctype html>
+<!-- Generated from the Anchor Renamer README by scripts/build-docs.py. Edit the README, then rebuild. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anchor Renamer Documentation — Anchor Studios</title>
+  <meta name="description" content="Batch-rename assets and GameObjects with stacked rules and a live preview. Swaps and case-only renames just work, and an asset batch can be undone even after an Editor restart.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://anchorstudiosdev.github.io/renamer/">
+  <meta property="og:title" content="Anchor Renamer Documentation">
+  <meta property="og:description" content="Batch-rename assets and GameObjects with stacked rules and a live preview. Swaps and case-only renames just work, and an asset batch can be undone even after an Editor restart.">
+  <meta property="og:image" content="https://anchorstudiosdev.github.io/src/img/tools/renamer/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/img/brand/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../src/img/brand/favicon-48.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/styles.css">
+  <link rel="stylesheet" href="../src/css/docs.css">
+</head>
+<body style="--tool-accent: oklch(78% 0.14 25);">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a href="../" class="brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </a>
+      <nav>
+        <a href="../#tools">Tools</a>
+        <a href="mailto:contact.anchorstudios@gmail.com">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="doc-hero">
+      <div class="wrap doc-hero-inner">
+        <div class="modal-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><path d="M4 7h11"/><path d="M4 12h7"/><path d="M4 17h5"/><path d="M16 15l4-4 -2-2 -4 4v2h2z"/></svg></div>
+        <div>
+          <div class="doc-eyebrow">
+            <a class="doc-back" href="../#tools"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"/><path d="M11 18l-6-6 6-6"/></svg>All tools</a>
+            <span class="doc-crumb" aria-hidden="true">/</span>
+            Documentation <span class="doc-version">Version 1.0.0</span>
+          </div>
+          <h1>Anchor Renamer</h1>
+          <p class="lede">Batch-rename assets and GameObjects with stacked rules and a live preview. Swaps and case-only renames just work, and an asset batch can be undone even after an Editor restart.</p>
+          <div class="hero-actions">
+            <span class="btn btn-primary btn-soon" aria-disabled="true">View on the Unity Asset Store<span class="btn-tag">Soon</span></span>
+            <a class="btn btn-ghost" href="mailto:contact.anchorstudios@gmail.com">Contact support</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="doc-gallery" id="screenshots" aria-label="Screenshots">
+      <div class="wrap gallery">
+        <figure class="gallery-stage">
+          <div class="gallery-frame">
+            <button class="gallery-open" type="button" aria-label="View full size">
+              <img id="gallery-image" src="../src/img/tools/renamer/01-overview.webp" alt="Overview: One window, every rename" width="1600" height="1067" decoding="async">
+            </button>
+            <button class="gallery-nav gallery-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button class="gallery-nav gallery-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+          </div>
+          <figcaption class="gallery-caption">
+            <span class="gallery-count" id="gallery-count">01 / 11</span>
+            <span class="gallery-label" id="gallery-label">Overview</span>
+            <span class="gallery-title" id="gallery-title">One window, every rename</span>
+          </figcaption>
+        </figure>
+        <div class="gallery-thumbs" id="gallery-thumbs">
+          <button class="gallery-thumb" type="button" data-index="0" aria-label="Overview" aria-current="true"><img src="../src/img/tools/renamer/01-overview-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="1" aria-label="Undo"><img src="../src/img/tools/renamer/02-undo-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="2" aria-label="Preview"><img src="../src/img/tools/renamer/03-preview-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="3" aria-label="Rule order"><img src="../src/img/tools/renamer/04-order-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="4" aria-label="Tokens"><img src="../src/img/tools/renamer/05-tokens-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="5" aria-label="Conflicts"><img src="../src/img/tools/renamer/06-conflicts-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="6" aria-label="Safety"><img src="../src/img/tools/renamer/07-safety-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="7" aria-label="Hierarchy"><img src="../src/img/tools/renamer/08-hierarchy-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="8" aria-label="Browse"><img src="../src/img/tools/renamer/09-browse-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="9" aria-label="Presets"><img src="../src/img/tools/renamer/10-presets-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button><button class="gallery-thumb" type="button" data-index="10" aria-label="In the box"><img src="../src/img/tools/renamer/11-box-thumb.webp" alt="" width="480" height="320" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+      <dialog class="lightbox" id="lightbox" aria-label="Screenshot">
+        <figure class="lightbox-figure">
+          <img id="lightbox-image" src="../src/img/tools/renamer/01-overview.webp" alt="Overview: One window, every rename" width="1600" height="1067">
+          <figcaption class="gallery-caption" id="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-close" type="button" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        <button class="gallery-nav lightbox-prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="gallery-nav lightbox-next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </dialog>
+    </section>
+
+    <div class="wrap doc-layout">
+      <nav class="doc-toc" aria-label="On this page">
+        <div class="doc-toc-title">On this page</div>
+        <ul><li class="toc-2"><a href="#quick-start">Quick Start</a></li><li class="toc-2"><a href="#sources">Sources</a></li><li class="toc-2"><a href="#rules">Rules</a></li><li class="toc-2"><a href="#tokens">Tokens</a></li><li class="toc-2"><a href="#preview">Preview</a></li><li class="toc-3"><a href="#sort-and-counters">Sort and counters</a></li><li class="toc-2"><a href="#safety">Safety</a></li><li class="toc-2"><a href="#undo">Undo</a></li><li class="toc-2"><a href="#presets">Presets</a></li><li class="toc-2"><a href="#settings">Settings</a></li><li class="toc-2"><a href="#compatibility">Compatibility</a></li></ul>
+      </nav>
+      <article class="doc-content">
+<p>Batch-rename Project assets and Hierarchy objects with a stack of rules and a live preview. Every row is checked before anything is written, swaps and case-only renames are handled for you, and an asset batch can be undone even after an Editor restart.</p>
+<hr>
+<h2 id="quick-start"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Quick Start</span></h2>
+<ol><li>
+Open the window: <strong>Tools &gt; Anchor &gt; Renamer &gt; Open Anchor Renamer</strong>, <strong>Anchor Rename...</strong> in the Project or Hierarchy right-click menu, or <strong>Alt+R</strong>.
+</li><li>
+Select what to rename: files or folders in the Project window, or GameObjects in the Hierarchy. The list in the window follows the selection.
+</li><li>
+Add rules with <strong>+ Add Rule</strong>. Each rule is a card on the left, and the preview on the right shows every new name as you type.
+</li><li>
+Uncheck any row to skip it, then press <strong>Rename</strong>, or <strong>Ctrl+Enter</strong> (<strong>Cmd+Enter</strong> on macOS) anywhere in the window.
+</li></ol>
+<p>Nothing is written until you press Rename. The <strong>? Help</strong> button in the window opens a short reference.</p>
+<hr>
+<h2 id="sources"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Sources</span></h2>
+<p>The two tabs at the top choose what the window renames.</p>
+<ul><li>
+<strong>Project Assets</strong>: the Project window's selection, folders dragged onto <strong>Sources</strong>, and a folder picked in the <strong>☰ Browse</strong> panel. A folder adds the files inside it.
+</li><li>
+<strong>Hierarchy Objects</strong>: the Hierarchy's selection, and objects picked in the <strong>☰ Browse</strong> panel.
+</li><li>
+<strong>☰ Browse</strong> opens a tree inside the window: the folders of <code>Assets</code>, or the open scenes' Hierarchy. A pick there also becomes Unity's selection.
+</li><li>
+<strong>Include subfolders</strong>: also scan the folders inside a source folder.
+</li><li>
+<strong>Rename folders too</strong>: off by default. A selected or dropped folder is renamed itself, and with Include subfolders on so is every folder inside it. The <code>Assets</code> folder is never renamed.
+</li><li>
+<strong>Rename scripts too</strong>: off by default, so C# script files are left out of the list and the footer says how many were. Renaming a script's file does not rename the class inside it; rename a script in your code editor, which renames the class and every use of it.
+</li><li>
+<strong>Include children</strong>: in Hierarchy Objects, add every descendant of each selected object.
+</li><li>
+<strong>Freeze targets</strong>: the list stops following the selection, so it stays while you click elsewhere.
+</li></ul>
+<hr>
+<h2 id="rules"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Rules</span></h2>
+<p>Rules run from top to bottom, and each one receives the name the rule above it produced.</p>
+<ul><li>
+Drag a card's grip, or use its ↑ and ↓ buttons, to reorder.
+</li><li>
+A card's checkbox turns its rule off without removing it.
+</li><li>
+Click a card's title to collapse it; a collapsed card shows a one-line summary.
+</li><li>
+<strong>Applies to</strong>, at the bottom of every card, limits that rule to the asset types you tick. Other rows pass through it unchanged.
+</li></ul>
+<div class="doc-table"><table><thead><tr><th>Rule</th><th>Does</th><th>More than one</th></tr></thead><tbody><tr><td><strong>Override Name</strong></td><td>Replaces the whole name with a template.</td><td>No</td></tr><tr><td><strong>Find &amp; Replace</strong></td><td>Replaces text, with <strong>Regex</strong>, <strong>Match Case</strong> and <strong>Whole Word</strong> options.</td><td>Yes</td></tr><tr><td><strong>Prefix / Suffix</strong></td><td>Adds text before and after the name.</td><td>Yes</td></tr><tr><td><strong>Format Case</strong></td><td>lower, UPPER, Title, camelCase, PascalCase, snake_case or kebab-case.</td><td>No</td></tr><tr><td><strong>Quick Cleanup</strong></td><td>Removes spaces, numbers or special characters, and collapses repeated <code>_</code>, <code>-</code> and spaces.</td><td>Yes</td></tr><tr><td><strong>Trim Characters</strong></td><td>Removes a number of characters from the start and the end.</td><td>Yes</td></tr><tr><td><strong>Numbering</strong></td><td>Adds a running number before or after the name.</td><td>Yes</td></tr></tbody></table></div>
+<ul><li>
+<strong>Override Name</strong> and <strong>Format Case</strong> rewrite the whole name, so a stack holds one of each. Choosing one you already have scrolls to it.
+</li><li>
+With <strong>Regex</strong> on, <code>$1</code> in the replacement is the first capture group. An invalid pattern is outlined in red and leaves names unchanged.
+</li><li>
+<strong>Format Case</strong> and <strong>Remove special characters</strong> keep letters and digits of every script.
+</li><li>
+<strong>Remove numbers</strong> removes every digit, not only a number at the end.
+</li><li>
+<strong>Numbering</strong> has <strong>Position</strong>, <strong>Start</strong>, <strong>Step</strong>, <strong>Digits</strong> and <strong>Separator</strong>. <strong>Replace existing trailing number</strong> is on by default: <code>Car_10</code> becomes <code>Car_04</code>. With it off the new number follows the old one: <code>Car_10_04</code>.
+</li></ul>
+<p>The order matters. Quick Cleanup (Remove numbers) above Numbering turns <code>Card_07</code> into <code>Card_001</code>; below Numbering it removes the number that was just added.</p>
+<hr>
+<h2 id="tokens"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Tokens</span></h2>
+<p>Override Name's template, Find &amp; Replace's replacement, and Prefix / Suffix accept tokens. Click <strong>{ }</strong> beside the field to pick one by name, or type it. The line under the field shows the result for the first item in the list.</p>
+<div class="doc-table"><table><thead><tr><th>Token</th><th>Gives</th><th>Example</th></tr></thead><tbody><tr><td><code>{n}</code></td><td>A counter from 1</td><td><code>1</code>, <code>2</code>, <code>3</code></td></tr><tr><td><code>{n:000}</code></td><td>The counter padded with zeroes, one per digit</td><td><code>001</code>, <code>002</code></td></tr><tr><td><code>{i}</code></td><td>A counter from 0</td><td><code>0</code>, <code>1</code>, <code>2</code></td></tr><tr><td><code>{name}</code></td><td>The name as the rules above left it</td><td><code>Car_Axe</code></td></tr><tr><td><code>{original}</code></td><td>The name before any rule ran</td><td><code>Car_Axe</code></td></tr><tr><td><code>{parent}</code></td><td>The containing folder, or the parent GameObject</td><td><code>Cards</code></td></tr><tr><td><code>{ext}</code></td><td>The file extension, with its dot</td><td><code>.png</code></td></tr><tr><td><code>{type}</code></td><td>The Unity type name</td><td><code>Texture2D</code></td></tr><tr><td><code>{date:yyyyMMdd}</code></td><td>Today's date, in any .NET date format</td><td><code>20260827</code></td></tr></tbody></table></div>
+<p>A token the Renamer doesn't know is left as typed.</p>
+<hr>
+<h2 id="preview"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Preview</span></h2>
+<ul><li>
+Each row shows the current name, the new name with the changed part highlighted, and a status: <strong>Ready</strong>, <strong>Unchanged</strong>, or what is wrong.
+</li><li>
+The search box, the type filter and the <strong>All / Ready / Conflict / Unchanged</strong> chips only choose which rows are shown. Rename applies to every checked row, shown or not; the footer has the count.
+</li><li>
+The checkbox above the list checks or unchecks every row shown, and <strong>Invert</strong> flips them.
+</li><li>
+Click a row to ping its asset or object.
+</li></ul>
+<h3 id="sort-and-counters"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Sort and counters</span></h3>
+<p><strong>Sort</strong> sets the order of the list by <strong>Name</strong>, <strong>Type</strong> or <strong>Path</strong>, and counters follow it: <code>{n}</code>, <code>{i}</code> and Numbering count the checked rows from the top of the list down.</p>
+<ul><li>
+By Name, a number inside a name counts by its value, so <code>Card_2</code> comes before <code>Card_10</code>.
+</li><li>
+By Path, Hierarchy objects are listed in Hierarchy order.
+</li><li>
+An unchecked row takes no number.
+</li><li>
+A rule limited by <strong>Applies to</strong> counts only the rows it applies to.
+</li></ul>
+<hr>
+<h2 id="safety"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Safety</span></h2>
+<ul><li>
+<strong>Conflicts</strong>: two rows that would get the same name, or a name another asset already has, are marked and not renamed. <strong>Resolve Conflicts</strong> gives each the first free <code>_1</code>, <code>_2</code>, ... variant.
+</li><li>
+<strong>Swaps and cycles</strong>: renaming <code>A</code> to <code>B</code> while <code>B</code> becomes <code>A</code> works, and so does a longer chain or cycle.
+</li><li>
+<strong>Case-only renames</strong>: <code>Player</code> to <code>player</code> works on Windows and macOS.
+</li><li>
+<strong>Special folders</strong>: a folder can't be renamed to or from <code>Editor</code>, <code>Resources</code>, <code>Plugins</code>, <code>StreamingAssets</code>, <code>Gizmos</code>, <code>Editor Default Resources</code> or <code>Standard Assets</code>.
+</li><li>
+<strong>Illegal names</strong>: for an asset, an empty name, illegal characters, a leading or trailing space, a trailing dot and Windows device names such as <code>CON</code> are refused. A Hierarchy object's name only has to be non-empty.
+</li><li>
+<strong>Read-only packages</strong>: assets in an immutable package are never renamed.
+</li><li>
+If an asset can't take its new name after all, it keeps its old one, and the Console says why.
+</li></ul>
+<hr>
+<h2 id="undo"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Undo</span></h2>
+<ul><li>
+<strong>Hierarchy objects</strong>: one <strong>Ctrl+Z</strong> reverts the whole batch.
+</li><li>
+<strong>Assets</strong>: Unity's Undo doesn't cover asset renames. <strong>Undo Last Rename</strong> reverts the last asset batch, and then the one before it, up to the last 50. It works after a script recompile or an Editor restart, and after the assets have been moved.
+</li><li>
+An asset that can't be renamed back, because something else has taken its old name, stays in the batch. Free the name and press <strong>Undo Last Rename</strong> again, or choose <strong>Forget</strong> to drop what is left so the batch before it can be reverted. An asset deleted since is skipped.
+</li></ul>
+<hr>
+<h2 id="presets"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2 5 5 2-5 2-2 5-2-5-5-2 5-2 2-5z"/><path d="M19 17v4"/><path d="M17 19h4"/></svg></span><span>Presets</span></h2>
+<p>The <strong>Presets ▾</strong> menu loads one of the built-in stacks, saves the current rule stack under a name, loads a saved one, and deletes one. Saving under an existing name replaces it. Presets are per user and available in every project on the machine.</p>
+<p>The built-in presets are read-only. Loading one fills the rule stack with a copy that you can edit and save under your own name.</p>
+<div class="doc-table"><table><thead><tr><th>Preset</th><th>What it does</th></tr></thead><tbody><tr><td>Clean imports</td><td>Removes spaces and special characters, collapses repeated separators, then sets PascalCase.</td></tr><tr><td>snake_case</td><td>Sets snake_case and trims stray separators.</td></tr><tr><td>Type prefixes</td><td>Adds <code>tex_</code> to textures, <code>mat_</code> to materials, <code>sfx_</code> to audio clips and <code>prefab_</code> to prefabs. A name that already has its prefix is left alone, so running it twice changes nothing.</td></tr><tr><td>Number a set</td><td>Numbers the list in its sort order with two digits and an <code>_</code> separator, replacing a trailing number.</td></tr><tr><td>Strip junk</td><td>Removes trailing <code> (1)</code>, <code>_copy</code>, <code>_final</code> and <code>_v2</code> style endings, however many are stacked.</td></tr></tbody></table></div>
+<hr>
+<h2 id="settings"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></span><span>Settings</span></h2>
+<p>The <strong>Renamer</strong> page under <code>Preferences &gt; Anchor</code> has the module's switch and its shortcut. Everything else is in the window and is remembered per user.</p>
+<ul><li>
+With the module off, its menu items are disabled and <strong>Alt+R</strong> does nothing.
+</li><li>
+<strong>Alt+R</strong> is registered with Unity's Shortcut Manager as <strong>Anchor &gt; Renamer &gt; Open Anchor Renamer</strong>, where it can be rebound or removed.
+</li></ul>
+<hr>
+<h2 id="compatibility"><span class="doc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></span><span>Compatibility</span></h2>
+<ul><li>
+Anchor Renamer is editor-only. It adds nothing to a build.
+</li><li>
+The undo history of asset renames is kept in <code>UserSettings/Anchor/RenameJournal.json</code>, in the project. GitHub's Unity <code>.gitignore</code> leaves <code>UserSettings</code> out of version control.
+</li><li>
+Presets, the rule stack and the window's layout are kept in the Editor's preferences on your machine.
+</li></ul>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <img src="../src/img/brand/mark-crisp-256.png" alt="">
+        Anchor Studios
+      </div>
+      <a class="footer-contact" href="mailto:contact.anchorstudios@gmail.com">contact.anchorstudios@gmail.com</a>
+      <span class="copyright">&copy; 2026 Anchor Studios</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const base = '../src/img/tools/renamer/';
+      const shots = [{"src": "01-overview.webp", "label": "Overview", "title": "One window, every rename"}, {"src": "02-undo.webp", "label": "Undo", "title": "Undo that outlasts a restart"}, {"src": "03-preview.webp", "label": "Preview", "title": "Check every name first"}, {"src": "04-order.webp", "label": "Rule order", "title": "Order is part of the rule"}, {"src": "05-tokens.webp", "label": "Tokens", "title": "Tokens from a menu"}, {"src": "06-conflicts.webp", "label": "Conflicts", "title": "Conflicts, caught and resolved"}, {"src": "07-safety.webp", "label": "Safety", "title": "Swaps just work"}, {"src": "08-hierarchy.webp", "label": "Hierarchy", "title": "Scene objects too"}, {"src": "09-browse.webp", "label": "Browse", "title": "Browse, don’t select"}, {"src": "10-presets.webp", "label": "Presets", "title": "Presets, built in and yours"}, {"src": "11-box.webp", "label": "In the box", "title": "Also in the box"}];
+      const $ = id => document.getElementById(id);
+      const strip = $('gallery-thumbs');
+      const thumbs = [...strip.querySelectorAll('.gallery-thumb')];
+      const lightbox = $('lightbox');
+      const caption = document.querySelector('.gallery-stage .gallery-caption');
+      const pad = n => String(n).padStart(2, '0');
+      let index = 0;
+
+      function show(next) {
+        index = (next + shots.length) % shots.length;
+        const shot = shots[index];
+        const alt = shot.label + ': ' + shot.title;
+        for (const image of [$('gallery-image'), $('lightbox-image')]) {
+          image.src = base + shot.src;
+          image.alt = alt;
+        }
+        $('gallery-count').textContent = pad(index + 1) + ' / ' + pad(shots.length);
+        $('gallery-label').textContent = shot.label;
+        $('gallery-title').textContent = shot.title;
+        $('lightbox-caption').innerHTML = caption.innerHTML;
+        thumbs.forEach((thumb, i) => thumb.setAttribute('aria-current', i === index));
+        const thumb = thumbs[index];
+        if (strip.scrollWidth > strip.clientWidth)
+          strip.scrollTo({ left: thumb.offsetLeft - (strip.clientWidth - thumb.offsetWidth) / 2, behavior: 'smooth' });
+        new Image().src = base + shots[(index + 1) % shots.length].src;
+      }
+
+      for (const button of document.querySelectorAll('.gallery-prev, .lightbox-prev'))
+        button.addEventListener('click', () => show(index - 1));
+      for (const button of document.querySelectorAll('.gallery-next, .lightbox-next'))
+        button.addEventListener('click', () => show(index + 1));
+      strip.addEventListener('click', e => {
+        const thumb = e.target.closest('.gallery-thumb');
+        if (thumb) show(Number(thumb.dataset.index));
+      });
+      document.querySelector('.gallery-open').addEventListener('click', () => lightbox.showModal());
+      document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+      $('screenshots').addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        show(index + (e.key === 'ArrowLeft' ? -1 : 1));
+      });
+      $('lightbox-caption').innerHTML = caption.innerHTML;
+    })();
+  </script>
+</body>
+</html>

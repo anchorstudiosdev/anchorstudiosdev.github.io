@@ -1,0 +1,95 @@
+{
+  "screenshots": [
+    {
+      "src": "01-overview.webp",
+      "thumb": "01-overview-thumb.webp",
+      "label": "Overview",
+      "title": "One window, every rename",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "02-undo.webp",
+      "thumb": "02-undo-thumb.webp",
+      "label": "Undo",
+      "title": "Undo that outlasts a restart",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "03-preview.webp",
+      "thumb": "03-preview-thumb.webp",
+      "label": "Preview",
+      "title": "Check every name first",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "04-order.webp",
+      "thumb": "04-order-thumb.webp",
+      "label": "Rule order",
+      "title": "Order is part of the rule",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "05-tokens.webp",
+      "thumb": "05-tokens-thumb.webp",
+      "label": "Tokens",
+      "title": "Tokens from a menu",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "06-conflicts.webp",
+      "thumb": "06-conflicts-thumb.webp",
+      "label": "Conflicts",
+      "title": "Conflicts, caught and resolved",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "07-safety.webp",
+      "thumb": "07-safety-thumb.webp",
+      "label": "Safety",
+      "title": "Swaps just work",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "08-hierarchy.webp",
+      "thumb": "08-hierarchy-thumb.webp",
+      "label": "Hierarchy",
+      "title": "Scene objects too",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "09-browse.webp",
+      "thumb": "09-browse-thumb.webp",
+      "label": "Browse",
+      "title": "Browse, don’t select",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "10-presets.webp",
+      "thumb": "10-presets-thumb.webp",
+      "label": "Presets",
+      "title": "Presets, built in and yours",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "11-box.webp",
+      "thumb": "11-box-thumb.webp",
+      "label": "In the box",
+      "title": "Also in the box",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "banner": "social.webp",
+  "preview": "social.jpg",
+  "card": "card.webp"
+}
