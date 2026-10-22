@@ -41,8 +41,11 @@
     "status": "soon",
     "statusLabel": "Launching soon",
     "accent": "oklch(78% 0.14 175)",
-    "summary": "Pin GameObjects, assets, and folders into named pages, with a persistent Shift+1–9 speed dial in one searchable panel.",
-    "detail": "One searchable panel for everything you keep hunting for: bookmarks organized into named, reorderable pages, a Recent tab for jumping back to previous selections, and a persistent Shift+1–9 speed dial that binds to specific objects — per scene for GameObjects, by GUID for assets, so a binding survives renames and moves. Opens docked with Ctrl+Q or as a hold-to-peek overlay with Alt+Q. Bookmarks are shared with Anchor Hierarchy rather than kept as a second private list.",
+    "summary": "Bookmark the objects you keep hunting for into named pages, jump back to recent selections, and recall any of them with Shift+1–9 from a panel that docks or pops up on a hotkey.",
+    "docs": "quickselect/",
+    "banner": "src/img/tools/quickselect/social.webp",
+    "card": "src/img/tools/quickselect/card.webp",
+    "detail": "Anchor Quick Select keeps the objects you use all day one click away: bookmarks sorted into named pages, with the pages you use most pinned on top, and a Recent tab for what you just had. Shift+1 to Shift+9 each hold one object, per scene for scene objects and by GUID for assets, so the same key picks the player in one level and the shopkeeper in another. Alt+Q docks the panel in your layout; hold Ctrl+Q for a peek over any window. Bookmarks in closed scenes stay listed and open their scene on a click, and a folder can be bookmarked in one go. With Anchor Hierarchy installed, the two share one list of bookmarks.",
     "icon": "<path d=\"M7 4h10a1 1 0 0 1 1 1v15l-6-4-6 4V5a1 1 0 0 1 1-1z\"/><path d=\"M10 9h4\"/>"
   },
   {

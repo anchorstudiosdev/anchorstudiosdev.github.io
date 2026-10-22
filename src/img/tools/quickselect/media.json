@@ -1,0 +1,71 @@
+{
+  "screenshots": [
+    {
+      "src": "01-overview.webp",
+      "thumb": "01-overview-thumb.webp",
+      "label": "Overview",
+      "title": "One click to what you need",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "02-speeddial.webp",
+      "thumb": "02-speeddial-thumb.webp",
+      "label": "Speed dial",
+      "title": "Nine keys, every level",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "03-peek.webp",
+      "thumb": "03-peek-thumb.webp",
+      "label": "Peek",
+      "title": "Hold to peek",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "04-pages.webp",
+      "thumb": "04-pages-thumb.webp",
+      "label": "Pages",
+      "title": "Pages for how you work",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "05-closed.webp",
+      "thumb": "05-closed-thumb.webp",
+      "label": "Closed scenes",
+      "title": "Outlives its scene",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "06-folders.webp",
+      "thumb": "06-folders-thumb.webp",
+      "label": "Folders",
+      "title": "A folder in one go",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "07-settings.webp",
+      "thumb": "07-settings-thumb.webp",
+      "label": "Settings",
+      "title": "Make it yours",
+      "width": 1600,
+      "height": 1067
+    },
+    {
+      "src": "08-box.webp",
+      "thumb": "08-box-thumb.webp",
+      "label": "In the box",
+      "title": "Also in the box",
+      "width": 1600,
+      "height": 1067
+    }
+  ],
+  "banner": "social.webp",
+  "preview": "social.jpg",
+  "card": "card.webp"
+}
