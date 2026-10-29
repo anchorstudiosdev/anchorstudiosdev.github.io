@@ -91,7 +91,10 @@
       <h3 id="modal-title"></h3>
       <span class="status" id="modal-status"></span>
       <p id="modal-body"></p>
-      <a class="btn btn-ghost" id="modal-docs" hidden>Read the documentation</a>
+      <div class="hero-actions">
+        <a class="btn btn-primary" id="modal-store" hidden>View on the Asset Store</a>
+        <a class="btn btn-ghost" id="modal-docs" hidden>Read the documentation</a>
+      </div>
     </div>
   </div>
 
@@ -227,6 +230,9 @@
       const modalDocs = document.getElementById('modal-docs');
       modalDocs.hidden = !tool.docs;
       if (tool.docs) modalDocs.href = tool.docs;
+      const modalStore = document.getElementById('modal-store');
+      modalStore.hidden = !tool.store;
+      if (tool.store) modalStore.href = tool.store;
       modalIcon.style.setProperty('--tool-accent', tool.accent);
       modalIcon.innerHTML = ICON_SHELL_OPEN + '24" height="24">' + tool.icon + '</svg>';
       const modalBanner = document.getElementById('modal-banner');

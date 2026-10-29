@@ -346,7 +346,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   background: currentColor;
 }
 
-.status-soon { color: var(--tool-accent, var(--accent)); }
+.status-soon,
+.status-live { color: var(--tool-accent, var(--accent)); }
 .status-dev { color: var(--muted); }
 
 .tools-footnote {
